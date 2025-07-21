@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Canino & Felino - Baño Premium</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Comic Neue -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css">   
+    <link rel="stylesheet" href="../css/Baño_y_corte.css">
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+    <!-- Section presentación -->
+    <div class="container py-5 px-5 spa_animated">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mb-5 mb-lg-0">
+          <h4 class="text-muted">Bienestar y diversión para</h4>
+          <h1 class="display-4 font-weight-bold">
+            <span class="spa_text-gold">Tu peludo</span> <span class="spa_text-dark">favorito</span>
+          </h1>
+          <h5 class="text-muted mb-3">¡Más que un baño, una fiesta de burbujas!</h5>
+          <p class="mb-4">Nuestro SPA mascotero usa shampoos naturales, masajes relajantes y mucho amor para dejar a tu compañero impecable y feliz como nunca.</p>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-spa spa_text-gold mr-2 spa_icon"></i> Aromaterapia para mascotas</li>
+            <li class="mb-2"><i class="fas fa-soap spa_text-gold mr-2 spa_icon"></i> Shampoo hipoalergénico</li>
+            <li class="mb-2"><i class="fas fa-gem spa_text-gold mr-2 spa_icon"></i> Brillo profesional</li>
+          </ul>
+    
+          <a href="#" class="spa_btn-primary btn btn-lg mt-3 px-4 spa_btn-magic spa_pulse">
+            <i class="fas fa-bath mr-2"></i> ¡Reservar ahora!
+          </a>
+        </div>
+    
+        <div class="col-lg-5">
+          <!-- Imagen principal con efecto hover -->
+          <img class="spa_rounded-img w-100 mb-3" src="../img/Baño_y_corte_img-1.png" alt="Mascota disfrutando SPA" style="height: 400px; object-fit: cover;">
+          
+          <!-- Mini galería -->
+          <div class="row">
+            <div class="col-6 pr-2">
+              <img class="spa_rounded-img w-100" src="../img/Baño_y_corte_img-2.png" alt="Baño relajante" style="height: 200px; object-fit: cover;">
+            </div>
+            <div class="col-6 pl-2">
+              <img class="spa_rounded-img w-100" src="../img/Baño_y_corte_img-3.png" style="height: 200px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Linea de tiempo -->
+    <div class="container-fluid py-5 spa_animated" style="background-color: #fcf5e2;">
+      <div class="container">
+      <h2 class="text-center mb-5"><span class="spa_text-dark">La experiencia de tu mascota en nuestro</span> <span class="spa_text-gold">Centro de Grooming</span></h2>
+      
+      <p class="text-center mb-5">
+        <b>Desde el inicio hasta el final</b>, nuestro enfoque es cuidar la salud y el bienestar de tu mascota en cada paso del proceso.<br>
+        Cada sesión de grooming toma <b>aproximadamente entre 1 y 3 horas</b>, dependiendo de las necesidades específicas de tu mascota.<br>
+        Nos aseguramos de que reciban un <b>cuidado atento y personalizado</b> que los mantenga <b>limpios, cómodos y felices</b>.
+      </p>
+    
+      <div class="row">
+        <!-- Columna de imagen -->
+        <div class="col-lg-5 mb-4 mb-lg-0 p-0">
+          <img src="https://www.vetipet.pe/wp-content/uploads/2025/02/consulta-mascotas-clinica-veterinaria-Lima-Peru.jpg" 
+               class=" spa_rounded-img-2 img-fluid w-100 h-100" 
+               alt="Mascota en grooming" 
+               style="object-fit: cover; border-radius: 20px;">
+        </div>
+        
+        <!-- Columna de pasos -->
+        <div class="col-lg-7 pl-lg-5">
+          <div class="steps-accordion" id="groomingSteps">
+            <!-- Paso 1 -->
+            <div class="step-card mb-3">
+              <div class="step-header bg-light border-0" id="headingOne">
+                <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#collapseOne" 
+                        aria-expanded="false" 
+                        aria-controls="collapseOne">
+                  <div class="d-flex align-items-center">
+                    <div class="step-number mr-3">1</div>
+                    <h5 class="mb-0 step-title">Check-in y Revisión General</h5>
+                  </div>
+                </button>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                <div class="step-content bg-light">
+                  <p>Comenzamos cada sesión de grooming con una <strong>revisión rápida en 7 puntos clave</strong> para asegurarnos de que tu mascota no presenta ninguna anomalía externa.</p>
+                  <p>Evaluamos sus <strong>ojos, oídos, nariz, boca y dientes, piel y pelaje, almohadillas de las patas y zona abdominal.</strong> Esto nos ayuda a detectar cualquier problema temprano, como infecciones o irritaciones.</p>
+                  <p>Además, nos tomamos el tiempo para escuchar tus observaciones y cualquier solicitud especial que tengas, <strong>garantizando que la sesión esté personalizada para tu mascota.</strong></p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Paso 2 -->
+            <div class="step-card mb-3">
+              <div class="step-header bg-light border-0" id="headingTwo">
+                <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#collapseTwo" 
+                        aria-expanded="false" 
+                        aria-controls="collapseTwo">
+                  <div class="d-flex align-items-center">
+                    <div class="step-number mr-3">2</div>
+                    <h5 class="mb-0 step-title">Preparación previa al baño</h5>
+                  </div>
+                </button>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                <div class="step-content bg-light">
+                  <p>Incluye un <strong>cepillado básico para eliminar el pelo suelto y enredos</strong>, además de la <strong>limpieza de orejas y corte de uñas</strong>, asegurando que tu mascota esté completamente lista para el baño y el resto del servicio.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Paso 3 -->
+            <div class="step-card mb-3">
+              <div class="step-header bg-light border-0" id="headingThree">
+                <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#collapseThree" 
+                        aria-expanded="false" 
+                        aria-controls="collapseThree">
+                  <div class="d-flex align-items-center">
+                    <div class="step-number mr-3">3</div>
+                    <h5 class="mb-0 step-title">Baño y cuidado higiénico</h5>
+                  </div>
+                </button>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                <div class="step-content bg-light">
+                  <p>Utilizamos productos específicos para el tipo de pelaje y piel de tu mascota.</p>
+                  <p>Realizamos <strong>dos baños completos</strong>: el primero para <strong>eliminar la suciedad</strong>, grasa y restos acumulados, y el segundo con un <strong>champú específico según su tipo de pelaje para nutrir y cuidar su piel.</strong></p>
+                  <p>Además, incluimos la limpieza de glándulas anales para asegurar una higiene completa, dejando a tu perro completamente limpio y fresco.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Paso 4 -->
+            <div class="step-card mb-3">
+              <div class="step-header bg-light border-0" id="headingFour">
+                <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#collapseFour" 
+                        aria-expanded="false" 
+                        aria-controls="collapseFour">
+                  <div class="d-flex align-items-center">
+                    <div class="step-number mr-3">4</div>
+                    <h5 class="mb-0 step-title">Secado, cepillado y corte higiénico</h5>
+                  </div>
+                </button>
+              </div>
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                <div class="step-content bg-light">
+                  <p>Aplicamos técnicas de secado personalizadas que incluyen secado con toalla o secadores sin calor, asegurando el máximo confort para tu mascota.</p>
+                  <p>Combinamos esto con un <strong>cepillado final para dejar el pelaje suave y con un acabado impecable.</strong></p>
+                  <p>Además, realizamos un <strong>corte higiénico en las áreas genitales y patas</strong> para mantener una limpieza adecuada y mejorar la comodidad de tu mascota.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Paso 5 -->
+            <div class="step-card">
+              <div class="step-header bg-light border-0" id="headingFive">
+                <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#collapseFive" 
+                        aria-expanded="false" 
+                        aria-controls="collapseFive">
+                  <div class="d-flex align-items-center">
+                    <div class="step-number mr-3">5</div>
+                    <h5 class="mb-0 step-title">Informe final</h5>
+                  </div>
+                </button>
+              </div>
+              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                <div class="step-content bg-light">
+                  <p>Al terminar, te proporcionamos un informe de los servicios realizados, junto con recomendaciones de cuidado en casa para que tu mascota se mantenga en óptimas condiciones hasta su próxima visita.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <!-- Section Beneficios con iconos animados -->
+    <div class="container-fluid py-5 spa_bg-gold rounded spa_animated" style="background-color: #D4A017 !important;">
+      <div class="container">
+        <h2 class="text-center mb-3">
+          <span class="spa_text-dark">¿Por qué</span> 
+          <span class="text-white">elegirnos?</span>
+        </h2>
+        <div class="underline mx-auto mb-5"></div>
+    
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 bg-transparent card-hover">
+              <div class="card-body d-flex flex-column align-items-center">
+                <div class="spa_pulse mb-3">
+                  <i class="fas fa-paw fa-3x text-white"></i>
+                </div>
+                <h5 class="text-white mb-3">Experiencia feliz</h5>
+                <p class="text-white">Técnicas que hacen que tu mascota disfrute el baño.</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 bg-transparent card-hover">
+              <div class="card-body d-flex flex-column align-items-center">
+                <div class="spa_pulse mb-3">
+                  <i class="fas fa-heart fa-3x text-white"></i>
+                </div>
+                <h5 class="text-white mb-3">Cuidado profesional</h5>
+                <p class="text-white">Estilistas certificados en bienestar animal.</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 bg-transparent card-hover">
+              <div class="card-body d-flex flex-column align-items-center">
+                <div class="spa_pulse mb-3">
+                  <i class="fas fa-star fa-3x text-white"></i>
+                </div>
+                <h5 class="text-white mb-3">Resultados brillantes</h5>
+                <p class="text-white">Pelaje suave y aroma fresco por días.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Section Packages de la veterinaria
+    <div class="container py-5 spa_animated">
+      <h2 class="text-center mb-5"><span class="spa_text-dark">Nuestros</span> <span class="spa_text-gold">Servicios</span></h2>
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <div class="spa_card h-100">
+            <img src="/img/Baño_y_corte_img-4.png" class="card-img-top" alt="Baño básico" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+              <h4 class="card-title spa_text-gold">Baño Esencial</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check spa_text-gold mr-2"></i> Baño con shampoo natural</li>
+                <li><i class="fas fa-check spa_text-gold mr-2"></i> Secado con toalla</li>
+                <li><i class="fas fa-check spa_text-gold mr-2"></i> Limpieza de oídos</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="spa_btn-primary btn w-100 spa_pulse">Reservar</a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-md-4 mb-4">
+          <div class="position-relative">
+            <div class="spa_card h-100" style="border-color: var(--spa_dark_gold);">
+              <span class="spa_badge-popular spa_shake">MÁS POPULAR</span>
+              <img src="/img/Baño_y_corte_img-5.png" class="card-img-top" alt="SPA premium" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h4 class="card-title spa_text-gold">SPA Premium</h4>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check spa_text-gold mr-2"></i> Baño con aromaterapia</li>
+                  <li><i class="fas fa-check spa_text-gold mr-2"></i> Secado profesional</li>
+                  <li><i class="fas fa-check spa_text-gold mr-2"></i> Cepillado premium</li>
+                  <li><i class="fas fa-check spa_text-gold mr-2"></i> Corte de uñas</li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="#" class="spa_btn-primary btn w-100 spa_pulse">Reservar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="col-md-4 mb-4">
+          <div class="spa_card h-100">
+            <img src="/img/Baño_y_corte_img-6.png" class="card-img-top" alt="Experiencia VIP" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+              <h4 class="card-title spa_text-gold">Experiencia VIP</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check spa_text-gold mr-2"></i> Todo el SPA Premium +</li>
+                <li><i class="fas fa-check spa_text-gold mr-2"></i> Mascarilla hidratante</li>
+                <li><i class="fas fa-check spa_text-gold mr-2"></i> Perfume natural</li>
+                <li><i class="fas fa-check spa_text-gold mr-2"></i> Bandana de regalo</li>
+              </ul>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="#" class="spa_btn-primary btn w-100 spa_pulse">Reservar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+  
+<!-- Section Info tipo de baños -->  
+    <div class="container-fluid py-5 spa_animated">
+      <div class="container">
+        <h2 class="text-center mb-4 spa_text-dark">Tipos de Baños para Perros</h2>
+        
+        <p class="text-center mb-5 lead">
+          Nos comprometemos con el máximo cuidado y bienestar de tu mascota en cada sesión, ya sea para revitalizar, calmar o proteger su pelaje.
+        </p>
+    
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion spa_accordion" id="bathTypesAccordion">
+              
+              <!-- Baño Estándar -->
+              <div class="card spa_card mb-3">
+                <div class="card-header bg-white" id="headingStandard">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseStandard" 
+                          aria-expanded="false" 
+                          aria-controls="collapseStandard">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">1</div>
+                      <h5 class="mb-0 spa_text-gold">Baño Estándar</h5>
+                    </div>
+                    <i class="fas fa-chevron-down spa_text-gold"></i>
+                  </button>
+                </div>
+                <div id="collapseStandard" class="collapse" aria-labelledby="headingStandard" data-parent="#bathTypesAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <p>Perfecto para el mantenimiento regular de tu perro.</p>
+                    <p>Incluye dos etapas: <strong>un primer baño para eliminar la suciedad y grasa</strong> acumulada, seguido de un <strong>segundo baño con shampoo especializado</strong> según el tipo de pelaje de tu mascota, ya sea <strong>corto, largo, rizado o liso</strong>.</p>
+                    <p>Además de limpiar profundamente, este baño asegura que su pelaje quede <strong>libre de olores</strong> y que su piel esté <strong>nutrida y libre de impurezas</strong>, manteniendo a tu perro <strong>sano y cómodo</strong>.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Baño Premium -->
+              <div class="card spa_card mb-3">
+                <div class="card-header bg-white" id="headingPremium">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapsePremium" 
+                          aria-expanded="false" 
+                          aria-controls="collapsePremium">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">2</div>
+                      <h5 class="mb-0 spa_text-gold">Baño Premium</h5>
+                    </div>
+                    <i class="fas fa-chevron-down spa_text-gold"></i>
+                  </button>
+                </div>
+                <div id="collapsePremium" class="collapse" aria-labelledby="headingPremium" data-parent="#bathTypesAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled spa_feature-list">
+                          <li class="mb-2"><i class="fas fa-check-circle spa_text-gold mr-2"></i> Baño Hipoalergénico</li>
+                          <li class="mb-2"><i class="fas fa-check-circle spa_text-gold mr-2"></i> Baño Medicado</li>
+                          <li class="mb-2"><i class="fas fa-check-circle spa_text-gold mr-2"></i> Baño Antipulgas</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <p>El <strong>Baño Premium</strong> ofrece un tratamiento completo de 4 etapas con productos especializados para cada necesidad específica de tu mascota.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Baño Hipoalergénico -->
+              <div class="card spa_card mb-3">
+                <div class="card-header bg-white" id="headingHipo">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseHipo" 
+                          aria-expanded="false" 
+                          aria-controls="collapseHipo">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">3</div>
+                      <h5 class="mb-0 spa_text-gold">Baño Hipoalergénico</h5>
+                    </div>
+                    <i class="fas fa-chevron-down spa_text-gold"></i>
+                  </button>
+                </div>
+                <div id="collapseHipo" class="collapse" aria-labelledby="headingHipo" data-parent="#bathTypesAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <p>Especialmente formulado para perros con piel sensible o alergias. Utilizamos productos suaves y naturales que:</p>
+                    <ul>
+                      <li>No irritan la piel</li>
+                      <li>Reducen reacciones alérgicas</li>
+                      <li>Mantienen el equilibrio natural del pH</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Baño Medicado -->
+              <div class="card spa_card mb-3">
+                <div class="card-header bg-white" id="headingMedicado">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseMedicado" 
+                          aria-expanded="false" 
+                          aria-controls="collapseMedicado">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">4</div>
+                      <h5 class="mb-0 spa_text-gold">Baño Medicado</h5>
+                    </div>
+                    <i class="fas fa-chevron-down spa_text-gold"></i>
+                  </button>
+                </div>
+                <div id="collapseMedicado" class="collapse" aria-labelledby="headingMedicado" data-parent="#bathTypesAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <p>Recomendado para problemas dermatológicos específicos. Incluye:</p>
+                    <ul>
+                      <li>Shampoos con ingredientes activos medicinales</li>
+                      <li>Tratamiento para condiciones como dermatitis o infecciones</li>
+                      <li>Alivio inmediato de picazón e irritación</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Baño Antipulgas -->
+              <div class="card spa_card">
+                <div class="card-header bg-white" id="headingAntipulgas">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseAntipulgas" 
+                          aria-expanded="false" 
+                          aria-controls="collapseAntipulgas">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">5</div>
+                      <h5 class="mb-0 spa_text-gold">Baño Antipulgas</h5>
+                    </div>
+                    <i class="fas fa-chevron-down spa_text-gold"></i>
+                  </button>
+                </div>
+                <div id="collapseAntipulgas" class="collapse" aria-labelledby="headingAntipulgas" data-parent="#bathTypesAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <p>Elimina pulgas y garrapatas de forma efectiva con:</p>
+                    <ul>
+                      <li>Productos seguros y efectivos</li>
+                      <li>Eliminación completa de parásitos</li>
+                      <li>Protección temporal contra reinfestación</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Section Galería de Resultados -->
+    <div class="container-fluid py-5 spa_bg-dark-gold spa_animated">
+      <div class="container">
+        <h2 class="text-center mb-3 text-white">¡Ellos ya <span class="spa_text-dark">disfrutaron</span> <span class="text-white">su SPA!</span></h2>
+        <div class="underline mx-auto mb-5"></div>
+        <div class="row">
+          <div class="col-6 col-md-3 mb-4">
+            <img src="../img/Baño_y_corte_img-7.png" class="spa_rounded-img img-fluid" alt="Antes y después 1" style="height: 250px; width: 100%; object-fit: cover;">
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <img src="../img/Baño_y_corte_img-4.png" class="spa_rounded-img img-fluid" alt="Antes y después 2" style="height: 250px; width: 100%; object-fit: cover;">
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <img src="../img/Baño_y_corte_img-8.avif" class="spa_rounded-img img-fluid" alt="Antes y después 3" style="height: 250px; width: 100%; object-fit: cover;">
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <img src="../img/Baño_y_corte_img-5.png" class="spa_rounded-img img-fluid" alt="Antes y después 4" style="height: 250px; width: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Section Grooming personalizado-->
+    <div class="container-fluid py-5 spa_animated"  style="background-color: #fcf5e2;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="spa_text-dark mb-4"><span class="spa_text-gold">Grooming personalizado </span>para el pelaje de tu perro</h2>
+            <p class="lead mb-5">Ofrecemos soluciones extra para tratar la condición en que se encuentre el pelaje de tu engreído.</p>
+            
+            <div class="accordion spa_accordion" id="groomingAccordion">
+              
+              <!-- Desmotado -->
+              <div class="card spa_card mb-3">
+                <div class="card-header bg-white" id="headingDesmotado">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseDesmotado" 
+                          aria-expanded="false" 
+                          aria-controls="collapseDesmotado">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">1</div>
+                      <h5 class="mb-0 spa_text-gold">Desmotado</h5>
+                    </div>
+                    <span class="accordion-icon">
+                      <span class="collapsed-show">+</span>
+                      <span class="expanded-hide">−</span>
+                    </span>
+                  </button>
+                </div>
+                <div id="collapseDesmotado" class="collapse" aria-labelledby="headingDesmotado" data-parent="#groomingAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <p>El <strong>desmotado</strong>, también conocido como <strong>dematting</strong>, es el proceso de eliminar los <strong>nudos</strong> o <strong>motas</strong> que se forman en el pelaje de mascotas con <b>pelajes largos o rizados, como los Poodles o Shih Tzu</b>.</p>
+                    <p>Las motas, cuando no se tratan, pueden causar molestias, tirantez en la piel e incluso infecciones cutáneas.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Deslanado -->
+              <div class="card spa_card mb-3">
+                <div class="card-header bg-white" id="headingDeslanado">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseDeslanado" 
+                          aria-expanded="false" 
+                          aria-controls="collapseDeslanado">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">2</div>
+                      <h5 class="mb-0 spa_text-gold">Deslanado</h5>
+                    </div>
+                    <span class="accordion-icon">
+                      <span class="collapsed-show">+</span>
+                      <span class="expanded-hide">−</span>
+                    </span>
+                  </button>
+                </div>
+                <div id="collapseDeslanado" class="collapse" aria-labelledby="headingDeslanado" data-parent="#groomingAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <p>El <strong>deslanado</strong> es un procedimiento esencial para razas de doble capa, como el <b>Husky o el Golden Retriever</b>.</p>
+                    <p>Consiste en la <b>eliminación del subpelo o pelo muerto</b> que se acumula bajo la capa superior del pelaje, especialmente durante las temporadas de muda.</p>
+                    <p>Este proceso evita que el pelaje se enrede, <b>mejora la circulación de aire en la piel y reduce el riesgo de sobrecalentamiento</b>, asegurando que tu mascota esté más cómoda y con un pelaje saludable.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Stripping -->
+              <div class="card spa_card">
+                <div class="card-header bg-white" id="headingStripping">
+                  <button class="btn btn-link text-decoration-none w-100 text-left d-flex justify-content-between align-items-center collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseStripping" 
+                          aria-expanded="false" 
+                          aria-controls="collapseStripping">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">3</div>
+                      <h5 class="mb-0 spa_text-gold">Stripping</h5>
+                    </div>
+                    <span class="accordion-icon">
+                      <span class="collapsed-show">+</span>
+                      <span class="expanded-hide">−</span>
+                    </span>
+                  </button>
+                </div>
+                <div id="collapseStripping" class="collapse" aria-labelledby="headingStripping" data-parent="#groomingAccordion" style="transition: 0.3s ease; ">
+                  <div class="card-body spa_accordion-content">
+                    <p>El <strong>stripping</strong> es una técnica especializada utilizada principalmente en <b>razas de pelaje duro o de alambre</b>, como los <b>Terriers o los Schnauzers</b>.</p>
+                    <p>En lugar de cortar el pelo, el <strong>stripping</strong> consiste en arrancar manualmente con instrumentos especiales el pelo muerto o maduro, lo que estimula el crecimiento de un pelaje nuevo y saludable.</p>
+                    <p>Esta técnica es fundamental para mantener la <strong>textura natural</strong> del pelaje y realzar su <strong>color</strong> y <strong>apariencia</strong>, asegurando que tu mascota luzca siempre perfecta.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6" style="padding-right: 30px;">
+            <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/banho-corte-004.jpg" 
+                 class="img-fluid spa_rounded-img-2 w-100" 
+                 alt="Servicios de grooming para perros"
+                 style="object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- Section Encabezado Tipos de Corte para Perros -->
+    <div class="container-fluid py-5 spa_animated">
+      <div class="container">
+          <!-- Encabezado con mejor espaciado -->
+          <div class="row mb-4">
+              <div class="col-12">
+                  <h2 class="mb-3 text-center text-md-left">Tipos de Corte para Perros</h2>
+                  <div class="text-center text-md-left">
+                      <p class="mb-3 lead">Nuestros cortes para perros están diseñados para realzar su estética según su raza, formas únicas y el estilo que desees para él.</p>
+                      <p class="mb-4">Para lograrlo, utilizamos diferentes técnicas que <strong class="spa_text-gold">incluyen tijeras, máquinas y mixto</strong>.</p>
+                      <h4 class="mb-4 spa_text-gold">Catálogo de cortes de raza:</h4>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Primera fila con mejor espaciado -->
+          <div class="row g-4 mb-4">
+              <!-- Yorkie -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/yorkie.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Yorkie</h5>
+                          <small class="text-muted d-block">Estilo clásico</small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Poodle -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/poddle.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Poodle</h5>
+                          <small class="text-muted d-block">(Caniche)</small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Maltés -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/maltes.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Maltés</h5>
+                          <small class="text-muted d-block">Elegancia premium</small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Cocker Spaniel -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/cocker-spaniel.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Cocker Spaniel</h5>
+                          <small class="text-muted d-block">Estilo inglés</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Segunda fila con mejor espaciado -->
+          <div class="row g-4">
+              <!-- Schnauzer -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/schnauzer-1.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Schnauzer</h5>
+                          <small class="text-muted d-block">Corte característico</small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Shih Tzu -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/shih-tzu.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Shih Tzu</h5>
+                          <small class="text-muted d-block">Estilo león</small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Bichón Frisé -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/bichon-frise.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Bichón Frisé</h5>
+                          <small class="text-muted d-block">Algodón esponjoso</small>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Chow Chow -->
+              <div class="col-md-6 col-lg-3">
+                  <div class="p-3 spa_card rounded-3 text-center">
+                      <img src="https://www.vetipet.pe/wp-content/uploads/2024/07/chow-chow.png" 
+                           class="rounded-circle mb-3 shadow-sm mx-auto d-block" 
+                           style="width: 90px; height: 90px; object-fit: cover; border: 3px solid var(--spa_border);">
+                      <div>
+                          <h5 class="spa_text-dark mb-1">Chow Chow</h5>
+                          <small class="text-muted d-block">Melena de león</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!-- Section pregunta final -->
+  <div class="section-grooming" style="background-color: #fcf5e2;">
+    <div class="container">
+    <h2>¿Por qué elegirnos para el grooming de tu perro?</h2>
+    <p>Elegir nuestro <strong>servicio de baño y corte para tu perro</strong>, garantiza un cuidado profesional, personalizado y seguro, que dejará a <span class="spa_text-gold">tu mascota limpia, feliz y saludable</span>.</p>
+  
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Card 1 -->
+        <div class="swiper-slide">
+          <div class="card-grooming">
+            <img src="../img/Baño_y_corte.img-10.png" alt="Groomers">
+             <h5>Groomers capacitados y sensibles</h5>
+            <p>Profesionales especializados en baño y corte personalizado y con trato gentil para que tu mascota esté segura.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="swiper-slide">
+          <div class="card-grooming">
+            <img src="../img/Baño_y_corte.img-11.png" style="width: 30%; height: auto;">
+            <h5>Los mejores productos veterinarios</h5>
+            <p>Amplia gama de productos de baño hipoalergénicos de alta calidad para cada tipo de piel, pelaje y raza.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="swiper-slide">
+          <div class="card-grooming">
+            <img src="../img/Baño_y_corte.img-12.png" alt="Infraestructura">
+            <h5>Infraestructura para una buena experiencia</h5>
+            <p>Ambientes cómodos para un servicio que toma en cuenta la tranquilidad de tu mascota.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Botones de navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Section Boton de promo o algo -->
+    <div class="container py-5 text-center spa_animated">
+      <h2 class="mb-4 spa_text-dark">¿Listo para el mejor SPA canino/felino?</h2>
+      <p class="lead mb-4">¡Reserva hoy y obtén un <strong class="spa_text-gold">kit de grooming</strong> de regalo!</p>
+      <a href="#" class="spa_btn-primary btn btn-lg px-5 spa_btn-magic spa_pulse">
+        <i class="fas fa-paw mr-2"></i> ¡Quiero mi regalo!
+      </a>
+    </div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+    <!-- Footer con onda 
+    <footer class="spa_bg-dark-gold text-white py-4" style="border-top: 3px solid var(--spa_border);">
+      <div class="container text-center">
+        <div class="spa_pulse">
+          <i class="fas fa-paw fa-2x mb-3 text-white"></i>
+        </div>
+        <p class="mb-0">© 2023 SPA Mascotero Premium. Todos los derechos reservados.</p>
+        <p class="mt-2">
+          <a href="#" class="text-white mr-3"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a>
+        </p>
+      </div>
+    </footer>-->
+ 
+    <!-- jQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/Baño_y_corte.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/archivos_carga.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>

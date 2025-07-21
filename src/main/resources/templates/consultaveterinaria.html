@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Veterinaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css"> 
+    <link rel="stylesheet" href="../css/consultaveterinaria.css">
+</head>
+
+<body>
+        <!-- Navbar -->
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+        <!-- Fin Navbar-->
+
+    <!-- Vacunación Start -->
+    <div class="container py-5 px-5">
+        
+        <div class="row align-items-center spa_animated">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+                <h4 class="text-secondary">Consulta Veterinaria para</h4>
+                <h1 class="display-4 font-weight-bold">
+                    <span class="text-primary-custom">Perros</span> & <span class="text-gold">Gatos</span>
+                </h1>
+                <h5 class="text-muted mb-3">Lo mejor para cuidar a tus mascotas.</h5>
+                <p class="mb-4">Una consulta veterinaria permite detectar problemas de salud en sus primeras etapas o
+                    manejar eficazmente enfermedades crónicas.</p>
+
+                <ul class="list-unstyled lista-beneficios">
+                    <li><i class="fa fa-paw"></i>Previene enfermedades</li>
+                    <li><i class="fa fa-balance-scale"></i>Control de peso y nutrición</li>
+                    <li><i class="fa fa-stethoscope"></i>Chequeos de rutina</li>
+                </ul>
+
+                <a href="#" class="btn btn-lg btn-custom mt-1 px-4">
+                    <i class="fas fa-calendar-alt mr-2"></i>Agenda una cita
+                </a>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <img class="rounded-img- rounded-img w-100" src="../img/consulta_img-1.jpg" alt="Consulta 1" style="height: 400px; object-fit: cover;">
+                    </div>
+                    <div class="col-6 pr-2">
+                        <img class="rounded-img- rounded-img w-100" src="../img/consulta_img-2.webp" alt="Consulta 2" style="height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="col-6 pl-2">
+                        <img class="rounded-img- rounded-img w-100" src="../img/consulta_img-3.webp" alt="Consulta 3" style="height: 200px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- Consulta Veterinaria End -->
+
+    <!-- Señales de necesidad de una consulta médica -->
+    <div class="container py-2 px-5 contenedor-consulta">
+        <div class="row align-items-center spa_animated">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="titulo-consulta">
+                    <strong>Señales que indican que tu perro o gato necesita una consulta veterinaria</strong>
+                </h2>
+                <ul class="lista-consulta">
+                    <li><i class="fas fa-check icon-custom-margin"></i>Vómitos o diarrea</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Pérdida de apetito o aumento del apetito</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Mal aliento o dificultad al comer</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Picazón y rascado constante</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Excesiva caída de pelo o pelaje opaco</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Aumento de la sed y la micción</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Decaimiento, hiperactividad o cambios en el
+                        comportamiento</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Aumento de peso o obesidad</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/consulta_img-4.jpg" alt="Consulta mascota" class="img-fluid img-consulta rounded-img">
+            </div>
+        </div>
+    </div>
+    <!--Fin del señales-->
+
+    <!-- Señales de que tu mascota necesita urgente una consulta médica -->
+    <div class="container py-5 px-5 contenedor-consulta">
+        <div class="row align-items-center spa_animated">
+            <div class="col-lg-6 text-center">
+                <img src="../img/consulta_img-5.jpg" alt="Consulta mascota" class="img-fluid img-consulta rounded-img">
+            </div>
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="titulo-consulta">
+                    <strong>Síntomas de urgencia que requieren atención veterinaria inmediata</strong>
+                </h2>
+                <ul class="lista-consulta">
+                    <li><i class="fas fa-check icon-custom-margin"></i>Tos, dificultad para respirar o sangrado nasal
+                    </li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Jadeo excesivo</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Mal aliento o dificultad al comer</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Secreciones oculares o nasales anormales</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Dificultad para orinar o cambios en el color de
+                        la orina</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Convulsiones</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Golpes y traumatismos</li>
+                    <li><i class="fas fa-check icon-custom-margin"></i>Pérdida de peso inesperada</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Fin del señales-->
+
+    <!-- Proceso de consulta -->
+    <div class="container py-5 px-5 spa_animated">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                <h2 class="mb-4 titulo-consulta">
+                    Una mejor y más rápida recuperación comienza con un diagnóstico correcto.
+                </h2>
+
+                <p class="texto-consulta mb-5">
+                    Por eso contamos con un equipo de veterinarios que evaluarán a tu mascota en detalle para conocer su
+                    caso.
+                    Cada consulta veterinaria es un <strong>proceso integral que se adapta a las necesidades específicas
+                        de tu mascota</strong>.
+                    Desde la anamnesis hasta el tratamiento, nuestros veterinarios se aseguran de brindar un cuidado
+                    preciso y profesional en cada paso.
+                </p>
+            </div>
+        </div>
+
+        <div class="contenedor-general">
+
+            <div class="contenedor-imagen">
+                <img src="../img/consulta_img-6.jpg" alt="Consulta veterinaria" class="rounded-img">
+            </div>
+
+            <div class="contenedor-acordeon">
+                <div class="acordeon-item">
+                    <input type="checkbox" id="acordeon1" class="acordeon-toggle">
+                    <label for="acordeon1">1. Cuéntale todo al veterinario</label>
+                    <div class="acordeon-body">
+                        La consulta comienza escuchándote a ti, el dueño, que mejor conoce a su mascota.
+                        El veterinario escuchará con atención todas tus inquietudes y detalles sobre el comportamiento o
+                        los síntomas de tu mascota.
+                        La información que compartas será clave para la evaluación inicial.
+                    </div>
+                </div>
+
+                <div class="acordeon-item">
+                    <input type="checkbox" id="acordeon2" class="acordeon-toggle">
+                    <label for="acordeon2">2. Examen físico: Una revisión integral</label>
+                    <div class="acordeon-body">
+                        El veterinario realizará un examen físico completo, evaluando a tu mascota de nariz a cola.
+                        Además de la revisión general, se enfocará en las áreas que mencionaste como preocupantes.
+                        Este examen detallado permite identificar posibles problemas de salud antes de que empeoren.
+                    </div>
+                </div>
+
+                <div class="acordeon-item">
+                    <input type="checkbox" id="acordeon3" class="acordeon-toggle">
+                    <label for="acordeon3">3. Diagnóstico: Apoyados por la mejor tecnología</label>
+                    <div class="acordeon-body">
+                        Si es necesario, el veterinario te indicará pruebas adicionales, como análisis de laboratorio,
+                        ecografías o rayos X, para obtener un diagnóstico más preciso.
+                        Gracias a nuestra tecnología avanzada, podemos conocer de forma inmediata y segura qué está
+                        ocurriendo con tu mascota, permitiéndonos actuar de manera rápida y eficaz.
+                    </div>
+                </div>
+
+                <div class="acordeon-item">
+                    <input type="checkbox" id="acordeon4" class="acordeon-toggle">
+                    <label for="acordeon4">4. Tratamiento: Personalizado para tu mascota</label>
+                    <div class="acordeon-body">
+                        Una vez obtenido el diagnóstico, el veterinario diseñará un plan de tratamiento personalizado,
+                        adaptado a las necesidades específicas de tu mascota.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin de proceso de consulta -->
+    <!-- Footer -->
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    <!-- Fin del footer-->
+    <!-- jQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/archivos_carga.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/consultaveterinaria.js"></script>
+</body>
+
+</html>

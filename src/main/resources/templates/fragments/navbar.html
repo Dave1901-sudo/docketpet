@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"  lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+
+
+<body>
+    <div th:fragment="navbar" class="navbar_html navbar_body">
+        <!-- Header Superior -->
+        <div class="container py-2">
+            <div class="row py-4 pb-0 pb-sm-4 align-items-center">
+                <!-- Logo -->
+                <div class="col-sm-4 col-lg-3 text-center text-sm-start">
+                    <div class="main-logo">
+                        <a href="/" class="waggy-navbar-brand">Veterinaria</a>
+                    </div>
+                </div>
+
+                <!-- Barra de búsqueda (solo desktop) -->
+                <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
+                    <div class="waggy-search-container d-flex align-items-center">
+                        <input type="text" class="waggy-search-input" placeholder="Buscar más de 1000 productos...">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="waggy-search-icon">
+                            <path fill="currentColor"
+                                d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Información de contacto (solo desktop) -->
+                <div
+                    class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
+                    <div class="waggy-support-box text-end d-none d-xl-block">
+                        <span class="waggy-support-label">Teléfono</span>
+                        <h5 class="mb-0">+51 932-007-429</h5>
+                    </div>
+                    <div class="waggy-support-box text-end d-none d-xl-block">
+                        <span class="waggy-support-label">Email</span>
+                        <h5 class="mb-0">Veterinaria@gmail.Com</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <hr class="waggy-divider m-0">
+        </div>
+
+        <!-- Navbar Principal - MODIFICADO PARA OCUPAR TODO EL ANCHO -->
+        <div class="waggy-navbar-fullwidth">
+            <div class="container waggy-navbar-container">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <!-- Iconos móviles -->
+                    <div class="d-flex d-lg-none align-items-end mt-3">
+                        <ul class="d-flex justify-content-end list-unstyled m-0">
+                            <li>
+                                <a href="#" class="waggy-icon-link">
+                                    <i class="fas fa-user fs-5"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waggy-icon-link">
+                                    <i class="fas fa-heart fs-5"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waggy-icon-link" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasCart">
+                                    <i class="fas fa-shopping-cart fs-5"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waggy-icon-link" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasSearch">
+                                    <i class="fas fa-search fs-5"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menú principal -->
+                    <div class="offcanvas offcanvas-end waggy-offcanvas" tabindex="-1" id="offcanvasNavbar">
+                        <div class="offcanvas-header justify-content-center">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body justify-content-between p-0 py-3">
+                            <select class="waggy-category-selector mb-0 me-5">
+                                <option>Comprar por Categoria</option>
+                                <option>Ropa</option>
+                                <option>Comida</option>
+                                <option>Juguetes</option>
+                            </select>
+
+                            <ul class="navbar-nav menu-list list-unstyled d-flex gap-md-3 mb-0">
+                                <li class="nav-item">
+                                    <a href="/" class="nav-link waggy-nav-item active">Inicio</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link waggy-nav-item dropdown-toggle" role="button"
+                                        data-bs-toggle="dropdown">Servicios</a>
+                                    <ul class="dropdown-menu waggy-dropdown-menu">
+                                        <li><a href="/bano-y-corte" class="dropdown-item waggy-dropdown-item">Baño y
+                                                Corte</a></li>
+                                        <li><a href="/consulta-veterinaria"
+                                                class="dropdown-item waggy-dropdown-item">Consulta Veterinaria</a></li>
+                                        <li><a href="/desparasitacion"
+                                                class="dropdown-item waggy-dropdown-item">Desparasitación</a></li>
+                                        <li><a href="/esterilizacion"
+                                                class="dropdown-item waggy-dropdown-item">Esterilización</a></li>
+                                        <li><a href="/vacunacion"
+                                                class="dropdown-item waggy-dropdown-item">Vacunación</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/tienda" class="nav-link waggy-nav-item">Tienda</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/nosotros" class="nav-link waggy-nav-item">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/contacto" class="nav-link waggy-nav-item">Contacto</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle waggy-nav-item" href="#" id="otrosDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Otros
+                                    </a>
+                                    <ul class="dropdown-menu waggy-dropdown-menu" aria-labelledby="otrosDropdown">
+                                        <li><a class="dropdown-item waggy-dropdown-item"
+                                                href="/equipo">Equipo veterinario</a></li>
+                                        <li><a class="dropdown-item waggy-dropdown-item"
+                                                href="/preguntas">Preguntas frecuentes</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- Iconos desktop -->
+                            <div class="d-none d-lg-flex align-items-end">
+                                <ul class="d-flex justify-content-end list-unstyled">
+                                    <li>
+                                        <a href="#" class="waggy-icon-link">
+                                            <i class="fas fa-user fs-5"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waggy-icon-link">
+                                            <i class="fas fa-heart fs-5"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waggy-icon-link" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasCart">
+                                            <i class="fas fa-shopping-cart fs-5"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

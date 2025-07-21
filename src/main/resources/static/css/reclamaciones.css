@@ -1,0 +1,131 @@
+        :root {
+            --spa_gold: #FFD700;
+            --spa_text: #333;
+            --spa_light: #f8f9fa;
+            --spa_dark: #343a40;
+        }
+        
+        .body-libro {
+            font-family: 'Comic Neue', cursive;
+            background-color: #fafafa;
+        }
+        
+        .spa_gold-text {
+            color: var(--spa_gold);
+        }
+        
+        .reclamo-header {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,255,255,1) 100%);
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            border-bottom: 3px solid var(--spa_gold);
+        }
+        
+        .reclamo-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .reclamo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .reclamo-icon {
+            font-size: 2.5rem;
+            color: var(--spa_gold);
+            margin-bottom: 1rem;
+        }
+        
+        .form-section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-control, .form-select {
+            border-radius: 10px;
+            padding: 0.75rem 1.25rem;
+            border: 2px solid #e9ecef;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--spa_gold);
+            box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+        }
+        
+        .btn-reclamo {
+            background-color: var(--spa_gold);
+            color: var(--spa_dark);
+            font-weight: bold;
+            padding: 0.75rem 2rem;
+            border-radius: 10px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-reclamo:hover {
+            background-color: #e6c200;
+            transform: translateY(-2px);
+        }
+        
+        .requisitos-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .requisitos-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .requisitos-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--spa_gold);
+            position: absolute;
+            left: 0;
+        }
+        
+        .legal-text {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--spa_gold);
+            color: var(--spa_dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #e6c200;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }

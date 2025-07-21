@@ -1,0 +1,405 @@
+:root {
+    --spa_gold: #d4af37;  /* dorado */
+    --spa_border: #d4af37; /* también dorado para el borde */
+    --spa_white: #ffffff;  /* blanco */
+    --spa_text: #555555;   /* gris oscuro para textos */
+}
+            /*Estilos spa_about mejorados */
+            .spa_about-section {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            
+            .spa_about-content {
+                animation: fadeInUp 1.2s ease-out;
+            }
+            
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .spa_about-title {
+                font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+                font-size: 3rem;
+                font-weight: 700;
+                color: #333;
+            }
+            
+            .spa_about-title .golden {
+                color: var(--spa_gold, #d4af37); /* Color dorado */
+            }
+            
+            .spa_about-text {
+                color: var(--spa_text, #555);
+                font-size: 1.2rem;
+                font-family: 'Chilanka', cursive;
+                line-height: 1.8;
+                text-align: justify;
+                margin-bottom: 1.5rem;
+                text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            }
+            
+            .spa_about-badge {
+                display: inline-block;
+                background: var(--spa_gold, #d4af37);
+                color: white;
+                font-size: 0.9rem;
+                padding: 0.3rem 0.7rem;
+                border-radius: 20px;
+                margin-bottom: 1rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+                letter-spacing: 1px;
+            }
+            
+            .spa_about-image img {
+                max-width: 100%;
+                border-radius: 20px;
+                border: 4px solid var(--spa_gold, #d4af37); /* Borde dorado más grueso */
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+                transition: all 0.4s ease;
+            }
+            
+            .spa_about-image img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+            }
+
+            /* Sección Spa Valores */
+            .spa_valores-section {
+                background-color: #fcf5e2;
+            }
+
+            .spa_valores-title {
+                color: var(--spa_text);
+                font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+            }
+
+            .spa_gold-text {
+                color: var(--spa_gold);
+            }
+
+            .spa_valores-description {
+                color: var(--spa_text);
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+
+            .spa_valor-card {
+                background-color: #ffffff;
+                border: 3px solid var(--spa_border);
+                border-radius: 20px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                transition: all 0.4s ease;
+                height: 100%;
+            }
+
+            .spa_valor-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            }
+
+            .spa_valor-icon {
+                font-size: 3rem;
+                color: var(--spa_gold, #d4af37); /* Aquí aseguramos el color dorado */
+                background-color: var(--spa_white);
+                border: 2px solid var(--spa_border);
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 15px;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+
+            .spa_valor-card:hover .spa_valor-icon {
+                background-color: var(--spa_gold);
+                color: var(--spa_white);
+                transform: rotate(10deg);
+            }
+
+            .spa_valor-title {
+                color: var(--spa_text);
+                font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+                font-size: 1.5rem;
+            }
+
+            .spa_valor-text {
+                color: var(--spa_text);
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            /* Animación para la sección spa-valores y demas */
+            .spa_animated {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: spaFadeUp 1.2s ease-out forwards;
+            }
+
+            @keyframes spaFadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            }
+
+            /* Estilos sección Nuestro Equipo */
+            .spa_card-glow {
+            background: var(--spa_white);
+            border: 2px solid var(--spa_gold);
+            border-radius: 1.5rem;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3), 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease, transform 0.3s ease;
+            animation: fadeInUp 1.5s ease-out forwards;
+            }
+
+            .spa_card-glow:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 60px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, var(--spa_white), #fff9e6);
+            }
+
+            .equipo-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.2rem;
+            }
+
+            .equipo-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 1.2rem;
+            border: 3px solid var(--spa_white);
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            }
+
+            .equipo-img-wrapper:hover .equipo-img {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .equipo-nombre {
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+            font-size: 1.8rem;
+            color: #333;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            }
+
+            .equipo-nombre:hover {
+            color: var(--spa_gold);
+            }
+
+            .equipo-cargo {
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--spa_text);
+            margin-bottom: 10px;
+            }
+
+            .equipo-bio {
+            color: var(--spa_text);
+            font-size: 1rem;
+            line-height: 1.6;
+            padding-top: 0.5rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .spa_valores-description {
+            color: var(--spa_text);
+            font-size: 1.2rem;
+            font-style: italic;
+            }
+
+            .spa_valor-card {
+            background-color: var(--spa_white);
+            border: 3px solid var(--spa_border);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            transform: translateY(0);
+            }
+
+            .spa_valor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            }
+
+            .spa_valor-icon {
+            font-size: 3rem;
+            color: var(--spa_gold);
+            background-color: var(--spa_white);
+            border: 2px solid var(--spa_border);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .spa_valor-card:hover .spa_valor-icon {
+            background-color: var(--spa_gold);
+            color: var(--spa_white);
+            transform: rotate(10deg);
+            }
+
+            @media (max-width: 768px) {
+            .spa_card-glow {
+                margin-bottom: 2rem;
+            }
+
+            .equipo-nombre {
+                font-size: 1.4rem;
+            }
+
+            .equipo-cargo {
+                font-size: 1rem;
+            }
+            }
+
+            /* Estilos sección Servicios */
+
+            /* Imagen de los servicios */
+            .spa_servicio-img {
+            width: 100%;
+            height: 350px; /* altura fija, pero tú puedes ajustarla */
+            object-fit: cover;
+            border-radius: 20px; /* bordes curvos */
+            }
+
+
+            /* Swiper */
+            .swiper {
+            padding-top: 20px;
+            padding-bottom: 40px;
+            }
+
+            .swiper-slide {
+            display: flex;
+            justify-content: center;
+            }
+
+            .spa_servicios-section {
+            background-color:  #fafafa;
+            padding: 4rem 0;
+            }
+
+            .spa_servicio-card {
+                display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* separa contenido y botón */
+            min-height: 450px; /* más altura para dar espacio */
+            background: var(--spa_white);
+            border: 2px solid var(--spa_border);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            }
+
+            .spa_servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .spa_servicio-icon {
+            font-size: 3rem;
+            color: var(--spa_gold);
+            }
+
+            .popular {
+            border: 3px solid var(--spa_gold);
+            background: linear-gradient(135deg, #fff9e6, #ffffff);
+            position: relative;
+            }
+
+            .badge-popular {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--spa_gold);
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+            color: var(--spa_gold) !important; /* Flechas doradas */
+            }
+
+            .swiper-pagination-bullet {
+            background: var(--spa_gold) !important; /* Puntos dorados */
+            }
+
+            .spa_reservar-btn-custom {
+            display: inline-block;
+            width: 100%;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--spa_white);
+            background: linear-gradient(135deg, var(--spa_gold), #e2c85b);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(212, 175, 55, 0.4);
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            letter-spacing: 1px;
+            }
+
+            .spa_reservar-btn-custom:hover {
+            background: linear-gradient(135deg, #c9a233, #b8962d);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.6);
+            transform: scale(1.03);
+            }
+            
+            .back-to-top {
+                position: fixed;
+                bottom: 30px;
+                left: 30px;
+                width: 50px;
+                height: 50px;
+                background-color: var(--spa_gold);
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                cursor: pointer;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+              }
+              
+              .back-to-top:hover {
+                background-color: #d4a017;
+                transform: translateY(-3px);
+              }
+              
+              .back-to-top.active {
+                opacity: 1;
+                visibility: visible;
+              }

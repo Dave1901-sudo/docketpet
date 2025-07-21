@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+  <title>Preguntas Frecuentes | Waggy Veterinaria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Waggy Veterinaria">
+  <meta name="keywords" content="preguntas frecuentes, veterinaria, cuidados animales, servicios veterinarios, Waggy">
+  <meta name="description" content="Resuelve tus dudas con nuestras preguntas frecuentes relacionadas con la salud y el bienestar de tus mascotas.">
+
+  <!-- Enlaces de CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/footer_style.css">
+  <link rel="stylesheet" href="../css/navbar_style.css"> 
+  <link rel="stylesheet" href="../css/preguntas.css"> <!-- CSS Personalizado -->
+
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+  <!-- Banner de Preguntas Frecuentes -->
+  <section id="banner-preguntas">
+    <div class="container">
+      <div class="row align-items-center text-center py-5">
+        <div class="col-12">
+          <h2 class="text-primary fw-bold">Preguntas Frecuentes</h2>
+          <p class="lead">Resuelve tus dudas sobre el cuidado de tus mascotas y los servicios de nuestra clínica veterinaria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Preguntas Generales Respecto a Mascotas -->
+  <section id="preguntas-generales" class="container py-5">
+    <div class="row text-center">
+      <div class="col-12">
+        <h3 class="display-4 text-primary">Dudas Generales Respecto a Mascotas</h3>
+        <p class="text-muted">Encuentra respuestas a las preguntas más comunes sobre el cuidado y bienestar de tus mascotas.</p>
+      </div>
+    </div>
+    
+    <!-- Acordeón de preguntas generales -->
+    <div class="accordion" id="accordionGeneral">
+      
+      <!-- Pregunta 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneralOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneralOne" aria-expanded="false" aria-controls="collapseGeneralOne">
+            ¿Con qué frecuencia debo llevar a mi mascota al veterinario?
+          </button>
+        </h2>
+        <div id="collapseGeneralOne" class="accordion-collapse collapse" aria-labelledby="headingGeneralOne" data-bs-parent="#accordionGeneral">
+          <div class="accordion-body">
+            Es recomendable llevar a tu mascota al veterinario al menos una vez al año para un chequeo general. Sin embargo, si tu mascota tiene condiciones especiales, su edad o su salud lo requieren, pueden ser necesarias visitas más frecuentes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneralTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneralTwo" aria-expanded="false" aria-controls="collapseGeneralTwo">
+            ¿Cómo saber si mi mascota está enferma?
+          </button>
+        </h2>
+        <div id="collapseGeneralTwo" class="accordion-collapse collapse" aria-labelledby="headingGeneralTwo" data-bs-parent="#accordionGeneral">
+          <div class="accordion-body">
+            Los signos de enfermedad pueden variar, pero algunos comunes incluyen pérdida de apetito, letargo, tos, dificultad para respirar, vómitos, diarrea, o cambios en el comportamiento. Si notas alguno de estos síntomas, consulta a tu veterinario.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneralThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneralThree" aria-expanded="false" aria-controls="collapseGeneralThree">
+            ¿Qué vacunas necesita mi mascota?
+          </button>
+        </h2>
+        <div id="collapseGeneralThree" class="accordion-collapse collapse" aria-labelledby="headingGeneralThree" data-bs-parent="#accordionGeneral">
+          <div class="accordion-body">
+            Las vacunas más comunes para perros incluyen la rabia, el parvovirus, la distemper y el adenovirus. En gatos, las vacunas más comunes son contra la rabia, la leucemia felina y el herpesvirus. Cada mascota tiene necesidades específicas según su edad y entorno.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneralFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneralFour" aria-expanded="false" aria-controls="collapseGeneralFour">
+            ¿Es necesario esterilizar a mi mascota?
+          </button>
+        </h2>
+        <div id="collapseGeneralFour" class="accordion-collapse collapse" aria-labelledby="headingGeneralFour" data-bs-parent="#accordionGeneral">
+          <div class="accordion-body">
+            La esterilización ayuda a prevenir ciertas enfermedades y comportamientos no deseados. Además, contribuye a reducir la sobrepoblación animal. Se recomienda esterilizar a las mascotas a partir de los 6 meses de edad.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneralFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneralFive" aria-expanded="false" aria-controls="collapseGeneralFive">
+            ¿Cómo puedo mejorar la alimentación de mi mascota?
+          </button>
+        </h2>
+        <div id="collapseGeneralFive" class="accordion-collapse collapse" aria-labelledby="headingGeneralFive" data-bs-parent="#accordionGeneral">
+          <div class="accordion-body">
+            Una dieta balanceada es clave para mantener a tu mascota saludable. Consulta con tu veterinario para elegir el tipo de alimento adecuado, ya sea comercial o natural, según las necesidades nutricionales de tu mascota.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingGeneralSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneralSix" aria-expanded="false" aria-controls="collapseGeneralSix">
+            ¿Qué hago si mi mascota tiene un comportamiento agresivo?
+          </button>
+        </h2>
+        <div id="collapseGeneralSix" class="accordion-collapse collapse" aria-labelledby="headingGeneralSix" data-bs-parent="#accordionGeneral">
+          <div class="accordion-body">
+            El comportamiento agresivo en las mascotas puede ser causado por diversas razones, como miedo, dolor o territorialidad. Es importante observar el contexto y, en caso necesario, consultar a un profesional para evaluar y corregir el comportamiento.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección de Preguntas Específicas Respecto a la Veterinaria -->
+  <section id="preguntas-veterinaria" class="container py-5">
+    <div class="row text-center">
+      <div class="col-12">
+        <h3 class="display-4 text-primary">Dudas Específicas Respecto a la Veterinaria</h3>
+        <p class="text-muted">Aquí te damos respuestas sobre los servicios y procedimientos en nuestra clínica veterinaria.</p>
+      </div>
+    </div>
+    
+    <!-- Acordeón de preguntas específicas -->
+    <div class="accordion" id="accordionVeterinaria">
+      
+      <!-- Pregunta 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVeterinariaOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVeterinariaOne" aria-expanded="false" aria-controls="collapseVeterinariaOne">
+            ¿Qué servicios ofrece Waggy Veterinaria?
+          </button>
+        </h2>
+        <div id="collapseVeterinariaOne" class="accordion-collapse collapse" aria-labelledby="headingVeterinariaOne" data-bs-parent="#accordionVeterinaria">
+          <div class="accordion-body">
+            En Waggy Veterinaria ofrecemos una variedad de servicios, incluyendo consultas generales, vacunación, cirugía, diagnóstico por imagen, desparacitación, y atención de urgencias. También tenemos planes de salud preventiva.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVeterinariaTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVeterinariaTwo" aria-expanded="false" aria-controls="collapseVeterinariaTwo">
+            ¿Cómo puedo agendar una cita para mi mascota?
+          </button>
+        </h2>
+        <div id="collapseVeterinariaTwo" class="accordion-collapse collapse" aria-labelledby="headingVeterinariaTwo" data-bs-parent="#accordionVeterinaria">
+          <div class="accordion-body">
+            Puedes agendar una cita fácilmente llamándonos por teléfono, enviándonos un mensaje por nuestras redes sociales, o utilizando nuestro sistema de citas en línea a través de nuestra página web.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVeterinariaThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVeterinariaThree" aria-expanded="false" aria-controls="collapseVeterinariaThree">
+            ¿Qué hago si mi mascota tiene una emergencia fuera de horario?
+          </button>
+        </h2>
+        <div id="collapseVeterinariaThree" class="accordion-collapse collapse" aria-labelledby="headingVeterinariaThree" data-bs-parent="#accordionVeterinaria">
+          <div class="accordion-body">
+            Si tu mascota tiene una emergencia fuera de horario, te recomendamos comunicarte con nuestro número de urgencias o con una clínica veterinaria de guardia en la zona. Asegúrate de mantener la calma y acudir lo más rápido posible.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVeterinariaFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVeterinariaFour" aria-expanded="false" aria-controls="collapseVeterinariaFour">
+            ¿Cuáles son los costos de los servicios?
+          </button>
+        </h2>
+        <div id="collapseVeterinariaFour" class="accordion-collapse collapse" aria-labelledby="headingVeterinariaFour" data-bs-parent="#accordionVeterinaria">
+          <div class="accordion-body">
+            Los costos pueden variar dependiendo del servicio que necesite tu mascota. Te recomendamos ponerte en contacto con nosotros para obtener un presupuesto personalizado.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVeterinariaFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVeterinariaFive" aria-expanded="false" aria-controls="collapseVeterinariaFive">
+            ¿Qué debo hacer si quiero comprar medicinas para mi mascota?
+          </button>
+        </h2>
+        <div id="collapseVeterinariaFive" class="accordion-collapse collapse" aria-labelledby="headingVeterinariaFive" data-bs-parent="#accordionVeterinaria">
+          <div class="accordion-body">
+            Puedes adquirir las medicinas directamente en nuestra clínica. Para algunos medicamentos, es necesario presentar una receta del veterinario.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingVeterinariaSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVeterinariaSix" aria-expanded="false" aria-controls="collapseVeterinariaSix">
+            ¿La clínica ofrece servicios de emergencia 24/7?
+          </button>
+        </h2>
+        <div id="collapseVeterinariaSix" class="accordion-collapse collapse" aria-labelledby="headingVeterinariaSix" data-bs-parent="#accordionVeterinaria">
+          <div class="accordion-body">
+            Sí, ofrecemos atención de urgencias en horarios extendidos y contamos con un número de emergencia al que puedes llamar en caso de una situación crítica.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="../js/archivos_carga.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

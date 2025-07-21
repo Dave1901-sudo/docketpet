@@ -1,0 +1,343 @@
+/*--------------------------------------------------------------
+Paleta de Colores
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #dead6f;
+  --dark-color: #222222;
+  --light-dark-color: #727272;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+  --light-primary-background: #fff9e6;
+}
+
+/*--------------------------------------------------------------
+Fuentes
+--------------------------------------------------------------*/
+:root {
+  --body-font: "Chilanka", cursive;
+  --heading-font: "Chilanka", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #41403e;
+  --bs-primary: #dead6f;
+  --bs-primary-rgb: 222, 173, 111;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  color: var(--bs-body-color);
+  text-transform: capitalize;
+}
+
+.secondary-font {
+  font-family: var(--secondary-font);
+  font-weight: 300;
+}
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb)) !important;
+}
+
+/*--------------------------------------------------------------
+Botones
+--------------------------------------------------------------*/
+.btn-primary {
+  padding: 1.2rem 3rem;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--light-dark-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  padding: 1.2rem 3rem;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/*--------------------------------------------------------------
+ANIMACIONES
+--------------------------------------------------------------*/
+.spa_animated {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: spaFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes spaFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*--------------------------------------------------------------
+FILTROS
+--------------------------------------------------------------*/
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  background: transparent;
+}
+
+.filter-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border-color: var(--accent-color) !important;
+}
+
+.filter-btn.active:focus {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(222, 173, 111, 0.25) !important;
+}
+
+.filter-btn.active:hover {
+  background-color: var(--light-dark-color);
+  border-color: var(--light-dark-color);
+}
+
+/*--------------------------------------------------------------
+EQUIPO
+--------------------------------------------------------------*/
+.team-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.team-image {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  background: var(--light-primary-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.1);
+}
+
+.team-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.team-badge.specialty {
+  background: var(--primary-color);
+}
+
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.team-specialty {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.team-experience {
+  margin-bottom: 1rem;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--light-dark-color);
+}
+
+.experience-item iconify-icon {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.team-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.team-social {
+  display: flex;
+  gap: 15px;
+}
+
+.team-social a {
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  color: var(--accent-color);
+}
+
+.team-social a:hover {
+  color: var(--light-dark-color);
+  transform: translateY(-3px);
+}
+
+/*--------------------------------------------------------------
+INFO 
+--------------------------------------------------------------*/
+.info-item {
+  flex: 1 1 220px;
+  background: var(--light-primary-background);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+}
+
+.info-item iconify-icon {
+  color: var(--accent-color);
+}
+
+.info-item h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.info-item p {
+  color: var(--light-dark-color);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+ESTADOS DE EQUIPO
+--------------------------------------------------------------*/
+.team-item.hidden {
+  display: none;
+}
+
+.no-team {
+  text-align: center;
+  padding: 3rem;
+  color: var(--light-dark-color);
+}
+
+.no-team h3 {
+  margin-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------
+RESPONSIVE
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .filter-buttons {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .team-card {
+    margin-bottom: 1rem;
+  }
+
+  .team-image {
+    height: 250px;
+  }
+
+  .team-name {
+    font-size: 1.2rem;
+  }
+
+  .experience-item {
+    font-size: 0.85rem;
+  }
+
+  .team-social a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-image {
+    height: 220px;
+  }
+}

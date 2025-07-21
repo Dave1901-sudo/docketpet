@@ -1,0 +1,187 @@
+/*--------------------------------------------------------------
+Paleta de Colores
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #dead6f;
+  --dark-color: #222222;
+  --light-dark-color: #727272;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+  --light-primary-background: #fff9e6;
+}
+
+/*--------------------------------------------------------------
+Fuentes
+--------------------------------------------------------------*/
+:root {
+  --body-font: "Chilanka", cursive;
+  --heading-font: "Chilanka", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #41403e;
+  --bs-primary: #dead6f;
+  --bs-primary-rgb: 222, 173, 111;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  color: var(--bs-body-color);
+  text-transform: capitalize;
+}
+
+.secondary-font {
+  font-family: var(--secondary-font);
+  font-weight: 300;
+}
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb)) !important;
+}
+
+/*--------------------------------------------------------------
+ANIMACIONES
+--------------------------------------------------------------*/
+.spa_animated {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: spaFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes spaFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*--------------------------------------------------------------
+HISTORIA
+--------------------------------------------------------------*/
+.history-content {
+  padding-right: 2rem;
+}
+
+.history-image img {
+  transition: transform 0.3s ease;
+}
+
+.history-image:hover img {
+  transform: scale(1.05);
+}
+
+/*--------------------------------------------------------------
+MISIÓN Y VISIÓN
+--------------------------------------------------------------*/
+.mission-card,
+.vision-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+/*--------------------------------------------------------------
+VALORES
+--------------------------------------------------------------*/
+.value-card {
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+  background: var(--light-primary-background);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
+EQUIPO
+--------------------------------------------------------------*/
+.team-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.team-image {
+  height: 300px;
+  overflow: hidden;
+  background: var(--light-primary-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+ESTADÍSTICAS
+--------------------------------------------------------------*/
+.stat-item {
+  padding: 2rem 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+/*--------------------------------------------------------------
+RESPONSIVE
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .history-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .mission-card,
+  .vision-card {
+    padding: 2rem !important;
+  }
+}

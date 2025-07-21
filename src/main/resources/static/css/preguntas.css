@@ -1,0 +1,126 @@
+/* Página de estilos para Preguntas Frecuentes */
+body {
+    margin: 0;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+}
+.text-primary {
+   color: #D4A017 !important; 
+}
+
+/* Botones personalizados */
+.btn-custom {
+    background-color: #D4A017;  /* Color dorado */
+    border: none;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #b88e11;  /* Dorado más oscuro en hover */
+}
+
+/* Estilo del Banner de Preguntas */
+#banner-preguntas {
+    background-color: #F4F4F4;
+    padding: 80px 0;
+}
+
+#banner-preguntas h2 {
+    font-size: 2.5rem;
+    color: #D4A017;  /* Color dorado */
+    font-weight: bold;
+}
+
+#banner-preguntas .lead {
+    color: #777;
+}
+
+/* Estilo de la sección de preguntas frecuentes */
+#preguntas-frecuentes {
+    padding: 50px 0;
+}
+
+#preguntas-frecuentes h3 {
+    font-size: 2.5rem;
+    color: #D4A017;  /* Título en dorado */
+    margin-bottom: 30px;
+}
+
+#preguntas-frecuentes p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilo de las preguntas en acordeón */
+.accordion-button {
+    background-color: #FFF9E6;  /* Fondo amarillo pálido */
+    border: 2px solid #FFD580;  /* Borde dorado */
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 18px;
+    text-align: left;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #FFF1C1;  /* Fondo al pasar el mouse */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #FFF1C1;  /* Fondo cuando está abierto */
+    color: #333;
+}
+
+.accordion-body {
+    background-color: #FFF9E6;  /* Fondo amarillo pálido */
+    border-top: 2px solid #FFD580;  /* Borde dorado */
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Estilo para los iconos */
+.bi-star, .bi-heart, .bi-paw {
+    font-size: 1.3rem;
+    color: #D4A017;
+    margin-right: 10px;
+}
+
+/* Estilo para las tarjetas de preguntas */
+.accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para el footer */
+#footer {
+    background-color: #F4F4F4;
+    padding: 40px 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Animación suave */
+.spa_animated {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: spaFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes spaFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

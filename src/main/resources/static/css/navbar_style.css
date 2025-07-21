@@ -1,0 +1,162 @@
+
+/* navbar container básico */
+.navbar_html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+.navbar_body {
+    margin: 0;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+    background-color: #FFF9E6;
+}
+
+/* Estilo del logo */
+.waggy-navbar-brand {
+    font-weight: 700;
+    font-size: 28px;
+    color: #D4A017;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Barra superior */
+.waggy-top-info {
+    font-size: 13px;
+    color: #555;
+}
+
+.waggy-support-box h5 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #D4A017;
+    margin-bottom: 0;
+}
+
+.waggy-support-label {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+/* Barra de búsqueda */
+.waggy-search-container {
+    border: 1px solid #D4A017;
+    border-radius: 4px;
+    padding: 8px 15px;
+    background: #FFF9E6;
+}
+
+.waggy-search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+    background: transparent;
+}
+
+/* Iconos */
+.waggy-search-icon {
+    width: 20px;
+    height: 20px;
+    color: #D4A017;
+}
+
+/* Navbar */
+.waggy-nav-item {
+    padding: 15px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.waggy-nav-item:hover,
+.waggy-nav-item.active {
+    color: #D4A017;
+}
+
+.waggy-nav-item:hover:after,
+.waggy-nav-item.active:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: #D4A017;
+}
+
+/* Dropdown */
+.waggy-dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 0;
+    margin-top: 0;
+    background-color: #FFF9E6;
+}
+
+.waggy-dropdown-item {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.waggy-dropdown-item:hover {
+    background-color: #FFEEB3;
+    color: #000;
+}
+
+/* Selector de categorías */
+.waggy-category-selector {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Iconos */
+.waggy-icon-link {
+    position: relative;
+    margin: 0 12px;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.waggy-icon-link:hover {
+    color: #D4A017;
+}
+
+/* Separador */
+.waggy-divider {
+    border-top: 1px solid #555;
+    margin: 0;
+}
+
+/* Fondo del navbar - MODIFICADO PARA OCUPAR TODO EL ANCHO */
+.waggy-navbar-fullwidth {
+    background-color: #FFEEB3;
+    width: 100%;
+}
+
+.waggy-navbar-container {
+    background-color: #FFEEB3;
+}
+
+/* Offcanvas background */
+.waggy-offcanvas {
+    background-color: #FFF9E6;
+}

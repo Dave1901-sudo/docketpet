@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome para iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- Google Fonts - Comic Sans MS -->
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Estilos -->
+        <link rel="stylesheet" href="../css/footer_style.css">
+        <link rel="stylesheet" href="../css/navbar_style.css">
+        <link rel="stylesheet" href="../css/index.css">
+            
+    </head>
+<body >
+    <!-- Navbar -->
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+    <!-- Contenido -->
+    <!-- Quiénes Somos -->
+    <div id="quienes-somos" class="spa_about-section my-0" style="background-color: #fafafa;">
+        <div class="container spa_animated">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="spa_about-content pe-lg-5">
+                <span class="spa_about-badge">Sobre Nosotros</span> <!-- Badge bonito -->
+                <h2 class="spa_about-title display-4 fw-normal mb-4">
+                  <span class="golden">Quiénes</span> Somos
+                </h2>
+                <p class="spa_about-text">
+                  En Waggy, somos un equipo apasionado de veterinarios, asistentes y amantes de los animales dedicados a proporcionar atención médica de calidad y productos excepcionales para tus mascotas.
+                </p>
+                <p class="spa_about-text">
+                  Fundada en 2010, nuestra clínica veterinaria ha crecido hasta convertirse en un referente en cuidado animal, combinando experiencia profesional con un trato cálido y personalizado para cada paciente.
+                </p>
+                <p class="spa_about-text">
+                  Entendemos que tus mascotas son parte de tu familia, por eso nos esforzamos cada día para ofrecerles el mejor cuidado posible en un ambiente acogedor y seguro.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="spa_about-image text-center">
+                <img src="../img/nosotros_img-3.png" alt="Equipo Waggy" class="img-fluid spa_rounded-img">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <!-- Sección Servicios Veterinarios -->
+    <section id="spa-valores" class="spa_valores-section py-5">
+        <div class="container spa_animated">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+            <h2 class="spa_valores-title display-4 fw-normal mb-3">
+                Nuestros <span class="spa_gold-text">Servicios</span>
+            </h2>
+            <p class="spa_valores-description">
+                Cuidamos de tus mascotas con atención profesional y amorosa
+            </p>
+            </div>
+        </div>
+        <div class="row g-4">
+    
+            <div class="col-md-4">
+            <div class="spa_valor-card p-4">
+                <div class="spa_valor-icon">
+                <i class="fas fa-bath"></i>
+                </div>
+                <h5 class="mt-3 mb-2 spa_valor-title">Baño y Corte</h5>
+                <p class="spa_valor-text">
+                Servicios de higiene y estética para mantener a tu mascota limpia, saludable y feliz.
+                </p>
+            </div>
+            </div>
+    
+            <div class="col-md-4">
+            <div class="spa_valor-card p-4">
+                <div class="spa_valor-icon">
+                <i class="fas fa-stethoscope"></i>
+                </div>
+                <h5 class="mt-3 mb-2 spa_valor-title">Consulta Veterinaria</h5>
+                <p class="spa_valor-text">
+                Evaluaciones de salud detalladas para diagnosticar y tratar cualquier problema a tiempo.
+                </p>
+            </div>
+            </div>
+    
+            <div class="col-md-4">
+            <div class="spa_valor-card p-4">
+                <div class="spa_valor-icon">
+                <i class="fas fa-pills"></i>
+                </div>
+                <h5 class="mt-3 mb-2 spa_valor-title">Desparasitación</h5>
+                <p class="spa_valor-text">
+                Eliminamos parásitos internos y externos para asegurar el bienestar de tu compañero.
+                </p>
+            </div>
+            </div>
+    
+            <div class="col-md-4">
+            <div class="spa_valor-card p-4">
+                <div class="spa_valor-icon">
+                <i class="fas fa-syringe"></i>
+                </div>
+                <h5 class="mt-3 mb-2 spa_valor-title">Vacunación</h5>
+                <p class="spa_valor-text">
+                Aplicamos vacunas esenciales para proteger a tu mascota de enfermedades peligrosas.
+                </p>
+            </div>
+            </div>
+    
+            <div class="col-md-4">
+            <div class="spa_valor-card p-4">
+                <div class="spa_valor-icon">
+                <i class="fas fa-heartbeat"></i>
+                </div>
+                <h5 class="mt-3 mb-2 spa_valor-title">Esterilización</h5>
+                <p class="spa_valor-text">
+                Procedimientos seguros para controlar la reproducción y mejorar la calidad de vida.
+                </p>
+            </div>
+            </div>
+    
+            <div class="col-md-4">
+            <div class="spa_valor-card p-4">
+                <div class="spa_valor-icon">
+                <i class="fas fa-tooth"></i>
+                </div>
+                <h5 class="mt-3 mb-2 spa_valor-title">Profilaxis Dental</h5>
+                <p class="spa_valor-text">
+                Limpieza dental profesional para prevenir enfermedades bucales y mejorar su salud.
+                </p>
+            </div>
+            </div>
+    
+        </div>
+        </div>
+    </section>
+
+    <!-- Section Servicios Mejorado con Swiper -->
+    <div class="spa_servicios-section py-5">
+        <div class="container spa_animated">
+            <div class="text-center mb-5">
+                <h2 class="spa_valores-title display-4 fw-normal">
+                Nuestros <span class="spa_gold-text">Planes</span>
+                </h2>
+                <p class="spa_valores-description">
+                Conoce cada uno de los planes que ofrecemos en nuestra veterinaria.
+                </p>
+            </div>
+    
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+    
+        <!-- Servicio 1 -->
+        <div class="swiper-slide">
+            <div class="card spa_servicio-card h-100 p-4 d-flex flex-column">
+            <div class="card-body text-center d-flex flex-column">
+                <div class="mb-4">
+                <img src="../img/Baño_y_corte_img-5.png" class="spa_servicio-img mb-3" alt="Circuito Hidroterapia">
+                </div>
+                <h5 class="card-title mb-3" style="font-family: 'Comic Neue', cursive; font-size: 1.8rem; color: var(--spa_text); font-weight: bold;">
+                Circuito <span style="color: var(--spa_gold);">Hidroterapia</span>
+                </h5>
+                <p class="card-text mb-4" style="color: var(--spa_text); font-size: 1.1rem; line-height: 1.6;">
+                Experimenta los beneficios del agua en diferentes temperaturas.
+                </p>
+                <ul class="list-unstyled spa_servicio-list text-start mx-auto mb-4" style="max-width: 300px;">
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Piscinas de contraste</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Jacuzzi relajante</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Baño turco</li>
+                <li><i class="fas fa-check spa_text-gold me-2"></i> Sauna finlandés</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                <a href="#" class="spa_reservar-btn-custom w-100">
+                    Reservar Ahora
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+       <!-- Servicio 2 - Popular -->
+        <div class="swiper-slide">
+            <div class="card spa_servicio-card popular h-100 p-4 d-flex flex-column">
+            <div class="card-body text-center d-flex flex-column">
+                <div class="badge-popular">Popular</div>
+                <div class="mb-4">
+                <img src="../img/Baño_y_corte_img-6.png" class="spa_servicio-img mb-3" alt="Spa Completo">
+                </div>
+                <h5 class="card-title mb-3" style="font-family: 'Comic Neue', cursive; font-size: 1.8rem; color: var(--spa_text); font-weight: bold;">
+                Spa <span style="color: var(--spa_gold);">Completo</span>
+                </h5>
+                <p class="card-text mb-4" style="color: var(--spa_text); font-size: 1.1rem; line-height: 1.6;">
+                Tratamientos premium en un ambiente de máxima relajación.
+                </p>
+                <ul class="list-unstyled spa_servicio-list text-start mx-auto mb-4" style="max-width: 300px;">
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Aromaterapia personalizada</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Exfoliación corporal</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Masaje de piedras calientes</li>
+                <li><i class="fas fa-check spa_text-gold me-2"></i> Facial hidratante</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                <a href="#" class="spa_reservar-btn-custom w-100">
+                    Reservar Ahora
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+        <!-- Servicio 3 -->
+        <div class="swiper-slide">
+            <div class="card spa_servicio-card h-100 p-4 d-flex flex-column">
+            <div class="card-body text-center d-flex flex-column">
+                <div class="mb-4">
+                <img src="../img/Baño_y_corte_img-7.png" class="spa_servicio-img mb-3" alt="Circuito Hidroterapia">
+                </div>
+                <h5 class="card-title mb-3" style="font-family: 'Comic Neue', cursive; font-size: 1.8rem; color: var(--spa_text); font-weight: bold;">
+                Circuito <span style="color: var(--spa_gold);">Hidroterapia</span>
+                </h5>
+                <p class="card-text mb-4" style="color: var(--spa_text); font-size: 1.1rem; line-height: 1.6;">
+                Experimenta los beneficios del agua en diferentes temperaturas.
+                </p>
+                <ul class="list-unstyled spa_servicio-list text-start mx-auto mb-4" style="max-width: 300px;">
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Piscinas de contraste</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Jacuzzi relajante</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Baño turco</li>
+                <li><i class="fas fa-check spa_text-gold me-2"></i> Sauna finlandés</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                <a href="#" class="spa_reservar-btn-custom w-100">
+                    Reservar Ahora
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+  
+       <!-- Servicio 4 - Popular -->
+        <div class="swiper-slide">
+            <div class="card spa_servicio-card popular h-100 p-4 d-flex flex-column">
+            <div class="card-body text-center d-flex flex-column">
+                <div class="badge-popular">Popular</div>
+                <div class="mb-4">
+                <img src="../img/Baño_y_corte_img-8.avif" class="spa_servicio-img mb-3" alt="Spa Completo">
+                </div>
+                <h5 class="card-title mb-3" style="font-family: 'Comic Neue', cursive; font-size: 1.8rem; color: var(--spa_text); font-weight: bold;">
+                Spa <span style="color: var(--spa_gold);">Completo</span>
+                </h5>
+                <p class="card-text mb-4" style="color: var(--spa_text); font-size: 1.1rem; line-height: 1.6;">
+                Tratamientos premium en un ambiente de máxima relajación.
+                </p>
+                <ul class="list-unstyled spa_servicio-list text-start mx-auto mb-4" style="max-width: 300px;">
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Aromaterapia personalizada</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Exfoliación corporal</li>
+                <li class="mb-2"><i class="fas fa-check spa_text-gold me-2"></i> Masaje de piedras calientes</li>
+                <li><i class="fas fa-check spa_text-gold me-2"></i> Facial hidratante</li>
+                </ul>
+                <div class="mt-auto pt-3">
+                <a href="#" class="spa_reservar-btn-custom w-100">
+                    Reservar Ahora
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        </div>
+        <!-- Flechas de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+            <!-- Paginación -->
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- Sección Nuestro Equipo Mejorada -->
+    <section id="nuestro-equipo" class="py-5" style="background-color: #ffffff;">
+        <div class="container spa_animated">
+        <div class="text-center mb-5">
+            <h2 class="spa_valores-title display-4 fw-normal">
+            Nuestro <span class="spa_gold-text">Equipo</span>
+            </h2>
+            <p class="spa_valores-description">
+            Conoce a los profesionales apasionados que hacen posible el cuidado y bienestar de tu mascota.
+            </p>
+        </div>
+        <div class="row g-4">
+            
+            <!-- Tarjeta 1 -->
+            <div class="col-md-3 col-sm-6">
+            <div class="card spa_card-glow h-100 text-center p-3">
+                <div class="equipo-img-wrapper">
+                <img src="../img/nosotros_img-4.webp" class="equipo-img img-fluid" alt="Veterinario 1">
+                </div>
+                <div class="card-body">
+                <h5 class="equipo-nombre">Dr. Carlos López</h5>
+                <p class="equipo-cargo"><span class="spa_gold-text">Veterinario General</span></p>
+                <p class="equipo-bio">Apasionado por la medicina preventiva y el bienestar animal, con más de 15 años de experiencia.</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Tarjeta 2 -->
+            <div class="col-md-3 col-sm-6">
+            <div class="card spa_card-glow h-100 text-center p-3">
+                <div class="equipo-img-wrapper">
+                <img src="../img/nosotros_img-5.png" class="equipo-img img-fluid" alt="Veterinaria 2">
+                </div>
+                <div class="card-body">
+                <h5 class="equipo-nombre">Dra. Jordany Franco Mata</h5>
+                <p class="equipo-cargo"><span class="spa_gold-text">Especialista en Cirugía</span></p>
+                <p class="equipo-bio">Especializada en cirugías de alta complejidad, amante de los animales de compañía.</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Tarjeta 3 -->
+            <div class="col-md-3 col-sm-6">
+            <div class="card spa_card-glow h-100 text-center p-3">
+                <div class="equipo-img-wrapper">
+                <img src="../img/nosotros_img-6.png" class="equipo-img img-fluid" alt="Asistente 3">
+                </div>
+                <div class="card-body">
+                <h5 class="equipo-nombre">Dave Armando Silva Alva</h5>
+                <p class="equipo-cargo"><span class="spa_gold-text">Técnico Veterinario</span></p>
+                <p class="equipo-bio">Dedicado al cuidado y atención de nuestros pacientes, con especial habilidad para calmar a las mascotas nerviosas.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col-md-3 col-sm-6">
+                        <div class="card spa_card-glow h-100 text-center p-3">
+                        <div class="equipo-img-wrapper">
+                            <img src="../img/index_imagendoctor_4.webp" class="equipo-img img-fluid" alt="Asistente 3">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="equipo-nombre">Cristian Huaman Alva</h5>
+                            <p class="equipo-cargo"><span class="spa_gold-text">Asistente Veterinaria</span></p>
+                            <p class="equipo-bio">Comprometida en brindar amor, apoyo y una atención excepcional a cada paciente.</p>
+                        </div>
+                        </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Fin Contenido -->
+    <!-- Agrega este div en tu HTML (puede ir justo antes del footer) -->
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- Footer -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/archivos_carga.js"></script>
+</body>
+</html>

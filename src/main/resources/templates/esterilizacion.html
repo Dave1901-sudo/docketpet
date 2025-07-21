@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estelirilización para mascotas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Comic Neue -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css">  
+    <link rel="stylesheet" href="../css/esterilizacion.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+    <!-- Fin Navbar-->
+    <!-- Estelirilización Start -->
+    <div class="container py-5 px-5">
+        <div class="row align-items-center spa_animated">
+        <div class="col-lg-7 mb-5 mb-lg-0">
+            <h4 class="text-secondary">Estelirilización para</h4>
+            <h1 class="display-4 font-weight-bold">
+            <span class="text-primary-custom">Perros</span> & <span class="text-gold">Gatos</span>
+            </h1>
+            <h5 class="text-muted mb-3">Cuidándolos día a día.</h5>
+            <p class="mb-4">Ofrecemos una solución rápida, segura y efectiva para la salud de tu mascota.</p>
+
+            <ul class="list-unstyled lista-beneficios">
+            <li><i class="fa fa-heartbeat"></i>Mejora su salud</li>
+            <li><i class="fa fa-hand-peace"></i>Disminuye comportamientos no deseados</li>
+            <li><i class="fa fa-smile"></i>Bienestar emocional</li>
+            </ul>
+
+            <a href="#" class="btn btn-lg btn-custom mt-1 px-4">
+            <i class="fas fa-calendar-alt mr-2"></i>Agenda una cita
+            </a>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="row">
+            <div class="col-12 mb-3">
+                <img class="rounded-img- rounded-img w-100" src="../img/esterilizacion_img-2.jpeg" alt="desparasitacion 1" style="height: 400px; object-fit: cover;">
+            </div>
+            <div class="col-6 pr-2">
+                <img class="rounded-img- rounded-img w-100" src="../img/esterilizacion_img-1.jpg" alt="desparasitacion 2" style="height: 200px; object-fit: cover;">
+            </div>
+            <div class="col-6 pl-2">
+                <img class="rounded-img- rounded-img w-100" src="../img/Baño_y_corte_img-3.png" alt="desparasitacion 3" style="height: 200px; object-fit: cover;">
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  <!-- Desparasitación End -->
+
+   <!-- Por qué esterilizar a tu mascota-->
+   <div class="container py-2 contenedor-esterilizacion">
+    <div class="row align-items-center spa_animated">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="titulo-esterilizacion">
+          <strong>La esterilización y castración son fundamentales para garantizar la salud y bienestar general de tu mascota.</strong>
+        </h2>
+        <p class="texto-esterilizacion">
+            Nos enfocamos en <strong>prevenir enfermedades reproductivas</strong>, mejorar el <strong>comportamiento</strong> y promover una <strong>vida más longeva</strong> para tu mascota, personalizando cada procedimiento según sus necesidades.
+        </p>
+        <p class="texto-esterilizacion">
+            Nuestro objetivo es reducir los riesgos de <strong>enfermedades graves</strong>, evitar embarazos no deseados y proporcionar una vida más <strong>tranquila</strong> y <strong>equilibrada</strong> para tu mascota, asegurando una atención integral y especializada en cada intervención.
+        </p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="../img/esterilizacion_img-4.jpg" alt="esterilización mascota" class="img-fluid img-esterilizacion rounded-img">
+      </div>
+    </div>
+  </div>
+  <!--Fin del porque-->
+
+  <!--PASOS DE LA ESTERILIZACION-->
+      <!-- Section Linea de tiempo -->
+      <div class="container-fluid py-5 esterilizacion_animated" style="background-color: #fcf5e2;">
+        <div class="container spa_animated">
+        <h2 class="text-center mb-3"><span class="titulo-esterilizacion">Esterilización y Castración:
+            Mejora la Calidad de Vida de tu Mascota</h2>
+        
+        <p class="texto-esterilizacion mb-5">
+          Nuestro equipo de veterinarios especializados se encarga de realizar la esterilización y castración de forma segura, garantizando un procedimiento adaptado a las necesidades de cada mascota.<br>
+            Nuestro proceso incluye tres pasos clave para garantizar un procedimiento exitoso y seguro:
+        </p>
+      
+        <div class="row">
+          <!-- Columna de imagen -->
+          <div class="col-lg-5 mb-4 mb-lg-0 p-0">
+            <img src="../img/esterilizacion_img-5.jpg" 
+                 class=" esterilizacion_rounded-img-2 img-fluid w-100 h-100" 
+                 alt="Mascota en grooming" 
+                 style="object-fit: cover; border-radius: 20px;">
+          </div>
+          
+          <!-- Columna de pasos -->
+          <div class="col-lg-7 pl-lg-5">
+            <div class="steps-accordion" id="groomingSteps">
+              <!-- Paso 1 -->
+              <div class="step-card mb-3">
+                <div class="step-header bg-light border-0" id="headingOne">
+                  <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseOne" 
+                          aria-expanded="false" 
+                          aria-controls="collapseOne">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">1</div>
+                      <h5 class="mb-0 step-title">Paso 1: Consulta veterinaria Previa</h5>
+                    </div>
+                  </button>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                  <div class="step-content bg-light">
+                    <p>Comenzamos con una consulta veterinaria completa donde se evalúa el estado general de salud de tu mascota. </p>
+                    <p>El veterinario examina su sistema reproductivo y revisa cualquier posible complicación que deba considerarse antes del procedimiento.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Paso 2 -->
+              <div class="step-card mb-3">
+                <div class="step-header bg-light border-0" id="headingTwo">
+                  <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseTwo" 
+                          aria-expanded="false" 
+                          aria-controls="collapseTwo">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">2</div>
+                      <h5 class="mb-0 step-title">Paso 2: Examen Prequirúrgico</h5>
+                    </div>
+                  </button>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                  <div class="step-content bg-light">
+                    <p>Antes de la cirugía, realizamos un <b>examen prequirúrgico</b> exhaustivo, que incluye análisis de laboratorio y otras pruebas para asegurarnos de que tu mascota está en óptimas condiciones para la operación, minimizando riesgos durante el procedimiento</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Paso 3 -->
+              <div class="step-card mb-3">
+                <div class="step-header bg-light border-0" id="headingThree">
+                  <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseThree" 
+                          aria-expanded="false" 
+                          aria-controls="collapseThree">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">3</div>
+                      <h5 class="mb-0 step-title">Paso 3: Procedimiento de Estirilización o Castración</h5>
+                    </div>
+                  </button>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                  <div class="step-content bg-light">
+                    <p>Durante la cirugía, utilizamos técnicas quirúrgicas avanzadas y aplicamos anestesia segura para garantizar que tu mascota esté cómoda en todo momento. </p>
+                    <p>Luego, monitorizamos su recuperación, proporcionando el cuidado postoperatorio adecuado para asegurar una pronta y completa recuperación.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Paso 4 -->
+              <div class="step-card mb-3">
+                <div class="step-header bg-light border-0" id="headingFour">
+                  <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseFour" 
+                          aria-expanded="false" 
+                          aria-controls="collapseFour">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">4</div>
+                      <h5 class="mb-0 step-title">Paso 4: Cuidados Postoperatorios Inmediatos</h5>
+                    </div>
+                  </button>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                  <div class="step-content bg-light">
+                    <p>Después de la cirugía, trasladamos a tu mascota a un área de recuperación donde será monitoreada atentamente.</p>
+                    <p>Te entregaremos indicaciones sobre medicación, alimentación y restricciones físicas para los primeros días en casa.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Paso 5 -->
+              <div class="step-card">
+                <div class="step-header bg-light border-0" id="headingFive">
+                  <button class="btn btn-link text-decoration-none w-100 text-left collapsed" 
+                          type="button" 
+                          data-toggle="collapse" 
+                          data-target="#collapseFive" 
+                          aria-expanded="false" 
+                          aria-controls="collapseFive">
+                    <div class="d-flex align-items-center">
+                      <div class="step-number mr-3">5</div>
+                      <h5 class="mb-0 step-title">Paso 5: Seguimiento y Revisiones</h5>
+                    </div>
+                  </button>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#groomingSteps" style="transition: 0.3s ease; ">
+                  <div class="step-content bg-light">
+                    <p>Agendamos una revisión posterior para evaluar la cicatrización y asegurar que tu mascota se está recuperando sin complicaciones.</p>
+                    <p>También resolveremos cualquier duda que tengas sobre su cuidado en esta nueva etapa.</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  <!--Fin de esterilizacion-->
+    <!-- Footer -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+    <!-- Fin del footer-->
+    <!-- jQuery, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/archivos_carga.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

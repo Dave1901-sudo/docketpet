@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Reclamaciones - Waggy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Comic Sans MS -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <link rel="stylesheet" href="../css/navbar_style.css">   
+    <link rel="stylesheet" href="../css/reclamaciones.css">
+</head>
+<body class="body-libro">
+    <!-- Navbar -->
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+    
+    <!-- Header -->
+    <header class="reclamo-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">
+                <span class="spa_gold-text">Libro de Reclamaciones</span>
+            </h1>
+            <p class="lead">Tu opinión es importante para nosotros. Estamos aquí para escucharte y mejorar nuestro servicio.</p>
+        </div>
+    </header>
+    
+    <!-- Sección de Información -->
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card reclamo-card h-100 p-4 text-center">
+                    <div class="reclamo-icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <h3>¿Qué es?</h3>
+                    <p>Es un registro oficial donde puedes presentar quejas, reclamos o sugerencias sobre nuestros servicios.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card reclamo-card h-100 p-4 text-center">
+                    <div class="reclamo-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>¿Cuándo usarlo?</h3>
+                    <p>Cuando no estés satisfecho con la atención recibida o el servicio brindado por nuestra veterinaria.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card reclamo-card h-100 p-4 text-center">
+                    <div class="reclamo-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Plazos</h3>
+                    <p>Nos comprometemos a responder tu reclamo en un plazo máximo de 15 días hábiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formulario de Reclamación -->
+    <section class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-section">
+                    <h2 class="text-center mb-4">Formulario de Reclamación</h2>
+                    
+                    <form id="reclamoForm">
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label">Nombres Completos *</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="apellidos" class="form-label">Apellidos Completos *</label>
+                                <input type="text" class="form-control" id="apellidos" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <label for="tipo-documento" class="form-label">Tipo de Documento *</label>
+                                <select class="form-select" id="tipo-documento" required>
+                                    <option value="" selected disabled>Seleccionar</option>
+                                    <option value="dni">DNI</option>
+                                    <option value="ce">Carné de Extranjería</option>
+                                    <option value="pasaporte">Pasaporte</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="numero-documento" class="form-label">Número de Documento *</label>
+                                <input type="text" class="form-control" id="numero-documento" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Correo Electrónico *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="telefono" class="form-label">Teléfono / Celular *</label>
+                            <input type="tel" class="form-control" id="telefono" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="direccion" class="form-label">Dirección *</label>
+                            <input type="text" class="form-control" id="direccion" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="detalle" class="form-label">Detalle de su reclamo *</label>
+                            <textarea class="form-control" id="detalle" rows="5" required></textarea>
+                            <div class="form-text">Describe con claridad los hechos, fecha, lugar y lo que solicitas para resolver tu reclamo.</div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="pedido" class="form-label">¿Qué solución esperas? *</label>
+                            <textarea class="form-control" id="pedido" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="acepto" required>
+                            <label class="form-check-label" for="acepto">Acepto el tratamiento de mis datos personales según la <a href="#">Política de Privacidad</a> *</label>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-reclamo btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i> Enviar Reclamo
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Requisitos y Legal -->
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 p-4">
+                    <h3 class="mb-3"><i class="fas fa-clipboard-list me-2 spa_gold-text"></i> Requisitos para presentar un reclamo</h3>
+                    <ul class="requisitos-list">
+                        <li>Ser mayor de 18 años o estar representado por un adulto</li>
+                        <li>Proporcionar datos personales completos y verídicos</li>
+                        <li>Describir con claridad los hechos que motivan el reclamo</li>
+                        <li>Indicar qué solución esperas recibir</li>
+                        <li>Adjuntar copia de tu documento de identidad (opcional)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 p-4">
+                    <h3 class="mb-3"><i class="fas fa-balance-scale me-2 spa_gold-text"></i> Información Legal</h3>
+                    <p>De acuerdo con la Ley N° 29571 - Código de Protección y Defensa del Consumidor:</p>
+                    <ul class="requisitos-list">
+                        <li>Tienes derecho a presentar reclamos por servicios deficientes</li>
+                        <li>Debemos responder en un plazo máximo de 15 días hábiles</li>
+                        <li>Puedes acudir a INDECOPI si no estás satisfecho con nuestra respuesta</li>
+                    </ul>
+                    <p class="legal-text mt-3">* Todos los campos marcados con asterisco son obligatorios. Los datos proporcionados serán tratados con confidencialidad y solo serán utilizados para atender tu reclamo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Botón de regreso arriba -->
+    <div id="back-to-top" class="back-to-top" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- Footer -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/archivos_carga.js"></script>
+    <script src="../js/reclamaciones.js"></script>
+</body>
+</html>

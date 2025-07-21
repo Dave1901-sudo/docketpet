@@ -1,0 +1,223 @@
+/*--------------------------------------------------------------
+Paleta de Colores
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #dead6f;
+  --dark-color: #222222;
+  --light-dark-color: #727272;
+  --light-color: #fff;
+  --grey-color: #dbdbdb;
+  --light-grey-color: #fafafa;
+  --primary-color: #6995b1;
+  --light-primary-color: #eef1f3;
+  --light-primary-background: #fff9e6;
+}
+
+/*--------------------------------------------------------------
+Fuentes
+--------------------------------------------------------------*/
+:root {
+  --body-font: "Chilanka", cursive;
+  --heading-font: "Chilanka", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #41403e;
+  --bs-primary: #dead6f;
+  --bs-primary-rgb: 222, 173, 111;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  color: var(--bs-body-color);
+  text-transform: capitalize;
+}
+
+.secondary-font {
+  font-family: var(--secondary-font);
+  font-weight: 300;
+}
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb)) !important;
+}
+
+/*--------------------------------------------------------------
+Botones
+--------------------------------------------------------------*/
+.btn-primary {
+  padding: 1.2rem 3rem;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--light-dark-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+Formularios
+--------------------------------------------------------------*/
+.form-control {
+  border: 1px solid rgba(65, 64, 62, 0.2);
+  border-radius: 0.25rem;
+  background: #fff;
+  padding: 1.25rem;
+  font-family: var(--secondary-font);
+  color: #908f8d;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: calc(1.5em + 2.5rem + 2px);
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(222, 173, 111, 0.25);
+}
+
+.form-control::placeholder {
+  color: #908f8d;
+  opacity: 1;
+}
+
+/* Arreglo específico para el select */
+.form-control select,
+select.form-control {
+  padding: 1.25rem;
+  height: auto;
+  min-height: calc(1.5em + 2.5rem + 2px);
+  line-height: 1.5;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1.25rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 3.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+  font-family: var(--secondary-font);
+}
+
+/*--------------------------------------------------------------
+ANIMACIONES
+--------------------------------------------------------------*/
+.spa_animated {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: spaFadeUp 1.2s ease-out forwards;
+}
+
+@keyframes spaFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*--------------------------------------------------------------
+TARJETAS DE CONTACTO
+--------------------------------------------------------------*/
+.contact-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+HORARIOS
+--------------------------------------------------------------*/
+.schedule-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+/*--------------------------------------------------------------
+FORMULARIO DE CONTACTO
+--------------------------------------------------------------*/
+.contact-form-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/*--------------------------------------------------------------
+MAPA
+--------------------------------------------------------------*/
+.map-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/*--------------------------------------------------------------
+RESPONSIVE
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .btn-primary {
+    padding: 1rem 2rem;
+  }
+
+  .contact-form-card {
+    padding: 2rem !important;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .form-control {
+    padding: 1rem;
+    min-height: calc(1.5em + 2rem + 2px);
+  }
+
+  select.form-control {
+    padding-right: 3rem;
+    background-position: right 1rem center;
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Veterinaria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconify para iconos -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/nosotros.css">
+  <link rel="stylesheet" href="../css/footer_style.css">
+  <link rel="stylesheet" href="../css/navbar_style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section py-5 spa-animated" style="background-color: #fafafa;">
+    <div class="container spa_animated">
+      <div class="text-center mb-5">
+        <h4 class="text-primary secondary-font">Conoce Nuestra Historia</h4>
+        <h1 class="fw-bold">Más de 15 años cuidando<br>a tus mejores amigos</h1>
+        <p class="lead text-muted">Somos una clínica veterinaria comprometida con la salud y bienestar de las mascotas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Historia -->
+  <section class="history-section py-5 spa-animated">
+    <div class="container spa_animated">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="history-content">
+            <h4 class="text-primary secondary-font">Nuestra Historia</h4>
+            <h2 class="fw-bold mb-4">Una pasión que comenzó hace años</h2>
+            <p class="text-muted mb-4">
+              Fundada en 2008 por la Dra. María González, nuestra veterinaria nació del amor incondicional hacia los animales y el deseo de brindar la mejor atención médica veterinaria en Lima.
+            </p>
+            <p class="text-muted mb-4">
+              Lo que comenzó como una pequeña clínica en San Isidro, hoy se ha convertido en un centro veterinario integral que cuenta con tecnología de vanguardia y un equipo de profesionales altamente capacitados.
+            </p>
+            <p class="text-muted">
+              A lo largo de estos años, hemos atendido a más de 10,000 mascotas, siempre manteniendo nuestro compromiso con la excelencia en el cuidado animal.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="history-image">
+            <img src="../img/nosotros_img-5.png" alt="Historia Veterinaria" class="img-fluid rounded-4 shadow-sm">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section class="mission-vision py-5" style="background-color: #fafafa;">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="mission-card bg-white rounded-4 shadow-sm p-5 h-100">
+            <div class="mission-icon mb-4">
+              <iconify-icon icon="mdi:heart" class="fs-1 text-primary"></iconify-icon>
+            </div>
+            <h3 class="fw-bold mb-3">Nuestra Misión</h3>
+            <p class="text-muted">
+              Brindar atención veterinaria integral de la más alta calidad, promoviendo la salud y bienestar de las mascotas a través de un servicio personalizado, tecnología avanzada y un equipo comprometido con la excelencia profesional.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="vision-card bg-white rounded-4 shadow-sm p-5 h-100">
+            <div class="vision-icon mb-4">
+              <iconify-icon icon="mdi:eye" class="fs-1 text-primary"></iconify-icon>
+            </div>
+            <h3 class="fw-bold mb-3">Nuestra Visión</h3>
+            <p class="text-muted">
+              Ser la clínica veterinaria líder en Lima, reconocida por nuestra excelencia en el cuidado animal, innovación en tratamientos y por fortalecer el vínculo especial entre las mascotas y sus familias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="values-section py-5 spa-animated">
+    <div class="container spa_animated">
+      <div class="text-center mb-5">
+        <h4 class="text-primary secondary-font">Nuestros Valores</h4>
+        <h2 class="fw-bold">Lo que nos define</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="value-card text-center p-4">
+            <div class="value-icon mb-3">
+              <iconify-icon icon="mdi:heart-pulse" class="fs-1 text-primary"></iconify-icon>
+            </div>
+            <h5 class="fw-bold mb-3">Compasión</h5>
+            <p class="text-muted">Tratamos a cada mascota con amor y cuidado, como si fuera nuestra propia familia.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="value-card text-center p-4">
+            <div class="value-icon mb-3">
+              <iconify-icon icon="mdi:certificate" class="fs-1 text-primary"></iconify-icon>
+            </div>
+            <h5 class="fw-bold mb-3">Excelencia</h5>
+            <p class="text-muted">Nos esforzamos por brindar el más alto estándar de atención veterinaria.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="value-card text-center p-4">
+            <div class="value-icon mb-3">
+              <iconify-icon icon="mdi:handshake" class="fs-1 text-primary"></iconify-icon>
+            </div>
+            <h5 class="fw-bold mb-3">Confianza</h5>
+            <p class="text-muted">Construimos relaciones duraderas basadas en la honestidad y transparencia.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="value-card text-center p-4">
+            <div class="value-icon mb-3">
+              <iconify-icon icon="mdi:lightbulb" class="fs-1 text-primary"></iconify-icon>
+            </div>
+            <h5 class="fw-bold mb-3">Innovación</h5>
+            <p class="text-muted">Incorporamos las últimas tecnologías para mejorar nuestros servicios.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section class="team-section py-5" style="background-color: #fafafa;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h4 class="text-primary secondary-font">Nuestro Equipo</h4>
+        <h2 class="fw-bold">Profesionales dedicados</h2>
+        <p class="lead text-muted">Conoce a los especialistas que cuidan de tus mascotas</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card bg-white rounded-4 shadow-sm overflow-hidden">
+            <div class="team-image">
+              <img src="../img/nosotros_img-3.png" alt="Dra. María González" class="img-fluid">
+            </div>
+            <div class="team-info p-4 text-center">
+              <h5 class="fw-bold mb-2">Dra. María González</h5>
+              <p class="text-primary mb-2">Directora y Veterinaria General</p>
+              <p class="text-muted small">15 años de experiencia. Especialista en medicina interna y cirugía general.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card bg-white rounded-4 shadow-sm overflow-hidden">
+            <div class="team-image">
+              <img src="../img/nosotros_img-2.webp" alt="Dr. Carlos Mendoza" class="img-fluid">
+            </div>
+            <div class="team-info p-4 text-center">
+              <h5 class="fw-bold mb-2">Dr. Carlos Mendoza</h5>
+              <p class="text-primary mb-2">Cirujano Veterinario</p>
+              <p class="text-muted small">10 años de experiencia. Especialista en cirugías complejas y traumatología.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card bg-white rounded-4 shadow-sm overflow-hidden">
+            <div class="team-image">
+              <img src="../img/nosotros_img-4.png" alt="Dr. Jacinto Ruiz" class="img-fluid">
+            </div>
+            <div class="team-info p-4 text-center">
+              <h5 class="fw-bold mb-2">Dr. Jacinto Ruiz</h5>
+              <p class="text-primary mb-2">Especialista en Dermatología</p>
+              <p class="text-muted small">8 años de experiencia. Experta en enfermedades de la piel y alergias.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estadísticas -->
+  <section class="stats-section py-5 spa-animated">
+    <div class="container spa_animated">
+      <div class="row text-center g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-number text-primary">15+</div>
+            <div class="stat-label">Años de Experiencia</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-number text-primary">10,000+</div>
+            <div class="stat-label">Mascotas Atendidas</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-number text-primary">5,000+</div>
+            <div class="stat-label">Cirugías Exitosas</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-number text-primary">98%</div>
+            <div class="stat-label">Clientes Satisfechos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div th:replace="~{fragments/footer :: footer}"></div>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/archivos_carga.js"></script>
+  <script src="../js/nosotros.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"  lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <!-- Font Awesome (íconos) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <footer  th:fragment="footer" id="footer_estilo" class="footer_estilo">
+        <div class="container footer_estilo-container py-5">
+            <div class="row g-4">
+    
+                <!-- Columna Logo y Redes -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer_estilo-brand">
+                        <img src="/img/nosotros_img-1.png" alt="Veterinaria Logo" class="footer_estilo-logo mb-3">
+                        <p class="footer_estilo-desc mb-4">
+                            <i class="fas fa-envelope footer_estilo-icon me-2"></i>
+                            Suscríbete a nuestro boletín para recibir actualizaciones sobre nuestras grandes ofertas.
+                        </p>
+                        <div class="footer_estilo-social-box">
+                            <h5 class="footer_estilo-social-title mb-3">
+                                <i class="fas fa-share-alt footer_estilo-icon me-2"></i>
+                                Síganos
+                            </h5>
+                            <ul class="footer_estilo-social-list list-unstyled d-flex gap-3">
+                                <li><a href="#" class="footer_estilo-social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="footer_estilo-social-link" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="footer_estilo-social-link" title="Pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="#" class="footer_estilo-social-link" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" class="footer_estilo-social-link" title="YouTube"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Columna Quick Links y Help Center en dos columnas -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <!-- Quick Links -->
+                        <div class="col-md-6">
+                            <div class="footer_estilo-section">
+                                <h3 class="footer_estilo-title">
+                                    <i class="fas fa-link footer_estilo-icon me-2"></i>
+                                    Accesos Rápidos
+                                </h3>
+                                <ul class="footer_estilo-link-list list-unstyled">
+                                    <li class="footer_estilo-link-item"><a href="index.html" class="footer_estilo-link"><i class="fas fa-home footer_estilo-link-icon"></i> Inicio</a></li>
+                                    <li class="footer_estilo-link-item"><a href="nosotros.html" class="footer_estilo-link"><i class="fas fa-info-circle footer_estilo-link-icon"></i> Nosotros</a></li>
+                                    <li class="footer_estilo-link-item"><a href="#" class="footer_estilo-link"><i class="fas fa-tag footer_estilo-link-icon"></i> Ofertas</a></li>
+                                    <li class="footer_estilo-link-item"><a href="#" class="footer_estilo-link"><i class="fas fa-concierge-bell footer_estilo-link-icon"></i> Servicios</a></li>
+                                    <li class="footer_estilo-link-item"><a href="contacto.html" class="footer_estilo-link"><i class="fas fa-phone footer_estilo-link-icon"></i> Contacto</a></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <!-- Help Center -->
+                        <div class="col-md-6">
+                            <div class="footer_estilo-section">
+                                <h3 class="footer_estilo-title">
+                                    <i class="fas fa-question-circle footer_estilo-icon me-2"></i>
+                                    Centro de ayuda
+                                </h3>
+                                <ul class="footer_estilo-link-list list-unstyled">
+                                    <li class="footer_estilo-link-item"><a href="#" class="footer_estilo-link"><i class="fas fa-question footer_estilo-link-icon"></i> FAQs</a></li>
+                                    <li class="footer_estilo-link-item"><a href="#" class="footer_estilo-link"><i class="fas fa-credit-card footer_estilo-link-icon"></i> Pagos</a></li>
+                                    <li class="footer_estilo-link-item"><a href="#" class="footer_estilo-link"><i class="fas fa-exchange-alt footer_estilo-link-icon"></i> Reembolsos y Devoluciones</a></li>
+                                    <li class="footer_estilo-link-item"><a href="#" class="footer_estilo-link"><i class="fas fa-shopping-cart footer_estilo-link-icon"></i> Comprobantes</a></li>
+                                    <li class="footer_estilo-link-item"><a href="#" class="footer_estilo-link"><i class="fas fa-truck footer_estilo-link-icon"></i> Información de Delivery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Columna Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer_estilo-section">
+                        <h3 class="footer_estilo-title">
+                            <i class="fas fa-newspaper footer_estilo-icon me-2"></i>
+                            Nuestro boletín informativo 
+                            <br> Our Newsletter
+                        </h3>
+                        <p class="footer_estilo-desc mb-3">
+                            <i class="fas fa-bell footer_estilo-icon me-2"></i>
+                            Suscríbete para recibir actualizaciones sobre nuestras ofertas.
+                        </p>
+                        <div class="footer_estilo-newsletter-box">
+                            <form class="footer_estilo-newsletter-form">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control footer_estilo-newsletter-input" placeholder="Ingresa tu email aquí">
+                                    <button class="btn footer_estilo-newsletter-btn" type="submit" title="Subscribe">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="footer_estilo-secure-info mt-2">
+                                <i class="fas fa-lock footer_estilo-icon me-2"></i>
+                                <small>Nunca compartiremos tu correo electrónico</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer_estilo-bottom py-3">
+            <div class="container">
+                <div class="footer_estilo-divider"></div>
+                <div class="row align-items-center mt-3">
+                    <div class="col-md-6">
+                        <p class="footer_estilo-copyright mb-2 mb-md-0">
+                            <i class="far fa-copyright footer_estilo-icon me-2"></i>
+                            2025 Veterinaria. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="footer_estilo-credits">
+                            <i class="fas fa-code footer_estilo-icon me-2"></i>
+                            Libro Reclamaciones <a href="reclamaciones.html" class="footer_estilo-credit-link">Reclamaciones</a>
+                            <i class="fas fa-share footer_estilo-icon mx-2"></i>
+                            Permisos y licencias <a href="#" class="footer_estilo-credit-link">InfoWeb</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
