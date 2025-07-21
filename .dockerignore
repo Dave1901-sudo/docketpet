@@ -1,0 +1,25 @@
+# Archivos de construcción y dependencias
+target/
+*.jar
+*.war
+
+# Archivos de IDE y editor
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Control de versiones
+.git/
+.gitignore
+
+# Documentación
+*.md
+LICENSE
+
+# Archivos de configuración local (pueden contener credenciales)
+*.properties
+*.yml
+.env
