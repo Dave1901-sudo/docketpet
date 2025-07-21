@@ -1,4 +1,4 @@
-# 🐶 docketpet - Sistema de Gestión de Mascotas
+# 🐶 docketpet - Sistema de Gestión de Mascotas con docker
 
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5.3-green.svg)
 ![Java](https://img.shields.io/badge/Java-17-blue.svg)
