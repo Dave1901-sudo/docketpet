@@ -2,7 +2,7 @@ name: CI Básico
 
 on:
   push:
-    branches: [ "main" ]  # Solo se activa en main
+    branches: [ "master" ]  # Solo se activa en main
 
 jobs:
   build:
